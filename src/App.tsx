@@ -1,15 +1,15 @@
-import Appbar from "./components/layout/Appbar"
-import Body from "./components/layout/body"
 import Footer from "./components/layout/footer"
+import Main from "./components/layout/main-content"
+import Navbar from "./components/layout/navbar"
+import './styles/style.scss'
 
 function App() {
-
   return (
-    <>
-      <Appbar/>
-      <Body/>
+    <body className="base-page">
+      <Navbar/>
+      <Main/>
       <Footer/>
-    </>
+    </body>
 )}
 
 export default App
