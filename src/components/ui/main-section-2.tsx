@@ -8,5 +8,5 @@ function MainSection2() {
       </div>
     );
   }
-  
+
   export default MainSection2;
