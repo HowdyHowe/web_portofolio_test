@@ -11,4 +11,12 @@
 
 html {
     font-family: "Rubik-Light", "open-sans";
+    scroll-behavior: smooth;
 }
+
+body {
+    @apply bg-[#2c2c2c] text-[#f2f2f2] transition-colors duration-500;
+}
+
+.dark body {
+    @apply bg-[#f2f2f2] text-[#2c2c2c]; }

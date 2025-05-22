@@ -1,7 +1,27 @@
 function Footer () {
     return (
         <footer className="footer">
-            <h1 className="footer-content">Footer</h1>
+            <div className="footer-content">
+                <ul>
+                    <li>contoh</li>
+                    <li>contoh</li>
+                    <li>contoh</li>
+                </ul>
+            </div>
+            <div className="footer-content">
+                <ul>
+                    <li>contoh</li>
+                    <li>contoh</li>
+                    <li>contoh</li>
+                </ul>
+            </div>
+            <div className="footer-content">
+                <ul>
+                    <li>contoh</li>
+                    <li>contoh</li>
+                    <li>contoh</li>
+                </ul>
+            </div>
         </footer>
     )
 }

@@ -1,29 +1,29 @@
 // navbar website
 .navbar{
-    @apply fixed flex flex-row items-center justify-between w-full h-[100px] px-[10%];
+    @apply fixed flex flex-row items-center justify-between w-full h-[35px] px-[10%] z-10;
 
     // menu navbar
     .navbar-content{
-        @apply flex list-none  pl-0 ;
+        @apply hidden md:flex list-none;
     }
 
     // item dari navbar
     .navbar-content-item{
-        @apply flex items-center justify-center w-[50px] p-2;
+        @apply flex flex-row items-center justify-center w-[100px];
     }
 
     // sidebar website
     .sidebar{
-        @apply fixed h-full w-[200px] top-[25%];
+        @apply fixed flex flex-col items-center top-[50px] left-0 md:hidden;
     }
 
     // menu sidebar
     .sidebar-content{
-        @apply list-none h-full pl-0;
+        @apply flex flex-row list-none pl-0;
     }
 
     // item dari sidebar
     .sidebar-content-item{
-        @apply p-4 ;
+        @apply flex items-center justify-center w-[120px] p-3 left-0 ;
     }
 }

@@ -1,8 +1,8 @@
 .footer{
-    @apply fixed flex flex-row items-center justify-center bottom-0 w-full h-[10%] bg-[#88304E];
+    @apply fixed flex flex-row items-center justify-evenly bottom-0 w-full h-[9em] z-20;
 
     .footer-content{
-        @apply flex text-white pl-0;
+        @apply flex items-center text-black text-[13px] pl-0 mx-2;
     }
 }
 
