@@ -7,7 +7,7 @@ export default {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(-50px)" },
+          "0%": { opacity: "0", transform: "translateY(-150px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         blink: {
@@ -19,8 +19,15 @@ export default {
           "50%": { transform: "translateY(-20px)" },
           "100%": { transform: "translateY(0px)" },
         },
+        waveMove: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
+        radioWave1: "waveMove 28s linear infinite",
+        radioWave2: "waveMove 20s linear infinite",
+        radioWave3: "waveMove 12s linear infinite",
         blink: "blink 2s ease-in-out infinite",
         fadeIn: "fadeIn 1s ease-out forwards",
         float: "float 4s ease-in-out infinite",

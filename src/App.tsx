@@ -1,7 +1,7 @@
 import ThemeProvider from "./components/hooks/theme-hook"
+import Footer from "./components/layout/footer"
 import Main from "./components/layout/main-content"
 import Navbar from "./components/layout/navbar"
-import Wave from "./components/ui/wave"
 import './styles/style.scss'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <ThemeProvider>
       <Navbar/>
       <Main/>
-      <Wave/>
+      <Footer/>
     </ThemeProvider>
 )}
 

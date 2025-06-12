@@ -1,24 +1,24 @@
-body {
-    margin: auto;
-    overflow: auto;
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
-    background-attachment: fixed;
-}
+// body {
+//     margin: auto;
+//     overflow: auto;
+//     animation: gradient 15s ease infinite;
+//     background-size: 400% 400%;
+//     background-attachment: fixed;
+// }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
+// @keyframes gradient {
+//     0% {
+//         background-position: 0% 0%;
+//     }
 
-    50% {
-        background-position: 100% 100%;
-    }
+//     50% {
+//         background-position: 100% 100%;
+//     }
 
-    100% {
-        background-position: 0% 0%;
-    }
-}
+//     100% {
+//         background-position: 0% 0%;
+//     }
+// }
 
 .wave {
     background: #797979;
@@ -28,7 +28,7 @@ body {
     height: 9em;
     animation: wave 10s -3s linear infinite;
     transform: translate3d(0, 0, 0);
-    opacity: 0.1;
+    opacity: 0.3;
     bottom: 0;
     left: 0;
     z-index: 10;
@@ -37,12 +37,18 @@ body {
 .wave:nth-of-type(2) {
     bottom: -1.25em;
     animation: wave 14s linear reverse infinite;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .wave:nth-of-type(3) {
     bottom: -2.5em;
     animation: wave 20s -1s reverse infinite;
+    opacity: 0.2;
+}
+
+.wave:nth-of-type(4) {
+    bottom: -2.5em;
+    animation: wave 9s -2s reverse infinite;
     opacity: 0.1;
 }
 

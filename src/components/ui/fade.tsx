@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from "react";
 
 interface FadeSectionProps {
   children: React.ReactNode;
-  durationMs?: number; // example: 600, 1200
+  durationMs?: number;
+  from: string;
+  to: string;
 }
 
-function FadeSection({ children, durationMs = 700 }: FadeSectionProps) {
+function FadeSection({ children, durationMs = 700, from, to }: FadeSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [hasAppeared, setHasAppeared] = useState(false);
 
@@ -31,7 +33,7 @@ function FadeSection({ children, durationMs = 700 }: FadeSectionProps) {
     <div
       ref={ref}
       className={`transition-all transform ${
-        hasAppeared ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+        hasAppeared ? `opacity-100 ${to}` : `opacity-0 ${from}`
       }`}
       style={{ transitionDuration: `${durationMs}ms` }}
     >
