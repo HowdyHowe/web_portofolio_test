@@ -1,10 +1,14 @@
-
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        rubik: ["Rubik"],
+        techmono: ["TechMono"],
+        jetbrainsmono: ["JetbrainsMono"],
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0", transform: "translateY(-150px)" },
@@ -29,7 +33,7 @@ export default {
         radioWave2: "waveMove 20s linear infinite",
         radioWave3: "waveMove 12s linear infinite",
         blink: "blink 2s ease-in-out infinite",
-        fadeIn: "fadeIn 1s ease-out forwards",
+        fadeIn: "fadeIn 1.5s ease-out forwards",
         float: "float 4s ease-in-out infinite",
       },
     },

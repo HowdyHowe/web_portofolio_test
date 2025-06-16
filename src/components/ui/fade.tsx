@@ -12,6 +12,10 @@ function FadeSection({ children, durationMs = 700, from, to }: FadeSectionProps)
   const [hasAppeared, setHasAppeared] = useState(false);
 
   useEffect(() => {
+    const target = ref.current;
+
+    if (!target) return;
+
     const observer = new IntersectionObserver(
       ([entry], obs) => {
         if (entry.isIntersecting) {
@@ -22,10 +26,10 @@ function FadeSection({ children, durationMs = 700, from, to }: FadeSectionProps)
       { threshold: 0.5 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(target);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      observer.unobserve(target);
     };
   }, []);
 

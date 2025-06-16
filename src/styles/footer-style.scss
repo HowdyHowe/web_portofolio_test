@@ -1,5 +1,5 @@
 .footer{
-    @apply fixed flex flex-row items-center justify-center bottom-0 w-full h-[9em] z-20;
+    @apply fixed flex flex-row items-center justify-center bottom-0 mb-3 w-full z-20;
 
     .footer-content{
         @apply flex items-center justify-evenly w-full text-[13px] pl-0 z-10;
