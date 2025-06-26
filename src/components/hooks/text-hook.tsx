@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function TextLoader(file: string) {
+function TextLoader({file, cname}: {file: string, cname: string}) {
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -9,7 +9,7 @@ function TextLoader(file: string) {
       .then((data) => setText(data));
   }, [file]);
 
-  return <p>{text}</p>;
+  return <p className={cname}>{text}</p>;
 }
 
 export default TextLoader;

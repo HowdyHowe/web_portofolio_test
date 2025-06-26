@@ -2,7 +2,7 @@
     @apply flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth;
 
     .main-section-1-content {
-        @apply flex flex-col items-center justify-center w-full h-screen p-10 border border-black
+        @apply flex flex-row items-center justify-center w-full h-screen p-10
     }
 }
 

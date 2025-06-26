@@ -24,8 +24,6 @@ function Navbar() {
       }
     }, [])
 
-    console.log(isNavbar);
-
     return (
         <header className="navbar">
           <h1 className="flex items-center justify-center text-xl">TOBA</h1>

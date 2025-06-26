@@ -1,5 +1,4 @@
 import ThemeProvider from "./components/hooks/theme-hook"
-import Footer from "./components/layout/footer"
 import Main from "./components/layout/main-content"
 import Navbar from "./components/layout/navbar"
 import './styles/font-face.scss'
@@ -10,7 +9,6 @@ function App() {
     <ThemeProvider>
       <Navbar/>
       <Main/>
-      <Footer/>
     </ThemeProvider>
 )}
 

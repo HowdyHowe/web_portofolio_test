@@ -2,13 +2,16 @@ import { useTheme } from "../hooks/theme-hook";
 import Fireflies from "./fireflies";
 import FadeSection from "./fade";
 import RadioWave from "./snake";
+import Wave from "./wave";
 
 function MainSection3() {
   const {isDark} = useTheme();
 
     return (
-      <div className="main-section relative flex flex-col items-center justify-center w-full h-screen bg-cover bg-center">
+      <div className="main-section relative flex flex-col items-center justify-center w-full h-screen bg-cover bg-center overflow-hidden">
+
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
+
         <FadeSection durationMs={2000} from="translate-y-[50px]" to="translate-y-0">
           <h1 className="text-4xl font-bold text-center">Welcome to My Website</h1>
         </FadeSection>
@@ -28,6 +31,10 @@ function MainSection3() {
           <div className="absolute top-0 left-0 w-full h-full">
             <RadioWave time="animate-radioWave3 mt-10" />
           </div>
+        </div>
+
+        <div className="absolute bottom-0 w-full">
+          <Wave/>
         </div>
 
       </div>
