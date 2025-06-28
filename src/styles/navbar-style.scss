@@ -1,6 +1,6 @@
 // navbar website
 .navbar{
-    @apply fixed flex flex-row items-center justify-between w-full h-[35px] px-[10%] z-10;
+    @apply fixed flex flex-row items-center justify-between w-full h-[40px] px-[10%] z-10;
 
     // menu navbar
     .navbar-content{
@@ -9,21 +9,21 @@
 
     // item dari navbar
     .navbar-content-item{
-        @apply flex flex-row items-center justify-center w-[100px];
+        @apply flex flex-row items-center justify-center w-[100px] text-[1.05rem];
     }
 
-    // sidebar website
-    .sidebar{
+    // dropdown website
+    .dropdown{
         @apply fixed flex flex-col items-center top-[50px] left-0 md:hidden;
     }
 
-    // menu sidebar
-    .sidebar-content{
+    // menu dropdown
+    .dropdown-content{
         @apply flex flex-row list-none pl-0;
     }
 
-    // item dari sidebar
-    .sidebar-content-item{
-        @apply flex items-center justify-center w-[120px] p-3 left-0 ;
+    // item dari dropdown
+    .dropdown-content-item{
+        @apply flex items-center justify-center px-6 py-3 left-0;
     }
 }

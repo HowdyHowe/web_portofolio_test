@@ -4,6 +4,7 @@ import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
 import { AiOutlineX } from "react-icons/ai";
+import TooltipWidget from "./tooltip";
 
 function MainSection1() {
   const {isDark} = useTheme();
@@ -15,9 +16,9 @@ function MainSection1() {
           style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
       <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
-      <div className="flex flex-col items-start justify-between pt-[5%] w-[50%] h-[50%]">
+      <div className="flex flex-col items-start justify-between pt-[5%] w-[50%] h-[50%] m-6">
         <div>
-          <FadeSection from={"translate-x-[-50px]"} to={"translate-y-0"} durationMs={1000}>
+          <FadeSection from={"translate-x-[-50px]"} to={"translate-y-0"} durationMs={1500}>
             <p className="font-jetbrainsmono text-base">
               Hi, Selamat Datang
             </p>
@@ -27,31 +28,55 @@ function MainSection1() {
               Saya Toba Amiruddin Sitorus
             </p>
           </FadeSection>
-          <FadeSection from={"translate-y-[70px]"} to={"translate-y-0"} durationMs={1500}>
+          <FadeSection from={"translate-y-[70px]"} to={"translate-y-0"} durationMs={2000}>
             <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm pt-8" />
           </FadeSection>
         </div>
 
         <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
           <ul className="flex flex-row items-center justify-start">
-            <li className="flex items-center justify-start w-[120px] left-0">
-              <LiaGithub size={35}/>
+            <li className="w-[120px] left-0">
+            <TooltipWidget
+                tooltipText="Github"
+                duration="duration-500"
+                link="https://www.google.com/"
+              >
+                <LiaGithub size={39}/>
+              </TooltipWidget>
             </li>
-            <li className="flex items-center justify-start w-[120px] left-0">
-              <LiaInstagram size={38}/>
+            <li className="w-[120px] left-0">
+            <TooltipWidget
+                tooltipText="Instagram"
+                duration="duration-500"
+                link="https://www.google.com/"
+              >
+                <LiaInstagram size={42}/>
+              </TooltipWidget>
             </li>
-            <li className="flex items-center justify-start w-[120px] left-0">
-              <AiOutlineX size={28}/>
+            <li className="w-[120px] left-0">
+              <TooltipWidget
+                tooltipText="X (Formerly Twitter)"
+                duration="duration-500"
+                link="https://www.google.com/"
+              >
+                <AiOutlineX size={32}/>
+              </TooltipWidget>
             </li>
-            <li className="flex items-center justify-start w-[120px] left-0">
-              <LiaLinkedin size={36}/>
+            <li className="w-[120px] left-0">
+              <TooltipWidget
+                tooltipText="LinkedIn"
+                duration="duration-500"
+                link="https://www.google.com/"
+              >
+                <LiaLinkedin size={40}/>
+              </TooltipWidget>
             </li>
           </ul>
         </FadeSection>
       </div>
 
-      <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={700}>
-        <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[400px] rounded-full opacity-70"/>
+      <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
+        <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[350px] max-w-[200] rounded-full opacity-70"/>
       </FadeSection>
 
     </div>
