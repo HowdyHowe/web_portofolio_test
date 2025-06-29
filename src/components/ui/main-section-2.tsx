@@ -6,7 +6,7 @@ function MainSection2() {
   const {isDark} = useTheme();
 
     return (
-      <div className="main-section relative w-full h-screen bg-cover bg-center">
+      <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden">
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
         <div className="absolute z-[-1] w-[80%] max-w-[800px] h-auto aspect-video"
           style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-2-light.svg')" : "url('/src/assets/images/background-section-2-dark.svg')",

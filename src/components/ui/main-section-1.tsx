@@ -10,13 +10,13 @@ function MainSection1() {
   const {isDark} = useTheme();
 
   return (
-    <div className="flex flex-row items-center justify-evenly relative w-full h-screen bg-cover bg-center snap-start scroll-smooth">
+    <div className="flex flex-row items-center justify-evenly relative w-full h-screen bg-cover bg-center snap-start overflow-hidden">
 
       <div className="absolute inset-0 bg-cover bg-center z-[-1] opacity-0 animate-fadeIn"
           style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
       <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
-      <div className="flex flex-col items-start justify-between pt-[5%] w-[50%] h-[50%] m-6">
+      <div className="flex flex-col items-start justify-between mt-[150px] w-[50%] m-6">
         <div>
           <FadeSection from={"translate-x-[-50px]"} to={"translate-y-0"} durationMs={1500}>
             <p className="font-jetbrainsmono text-base">
@@ -34,8 +34,8 @@ function MainSection1() {
         </div>
 
         <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
-          <ul className="flex flex-row items-center justify-start">
-            <li className="w-[120px] left-0">
+          <ul className="flex flex-row items-center gap-12 mt-[200px]">
+            <li>
             <TooltipWidget
                 tooltipText="Github"
                 duration="duration-500"
@@ -44,7 +44,7 @@ function MainSection1() {
                 <LiaGithub size={39}/>
               </TooltipWidget>
             </li>
-            <li className="w-[120px] left-0">
+            <li>
             <TooltipWidget
                 tooltipText="Instagram"
                 duration="duration-500"
@@ -53,7 +53,7 @@ function MainSection1() {
                 <LiaInstagram size={42}/>
               </TooltipWidget>
             </li>
-            <li className="w-[120px] left-0">
+            <li>
               <TooltipWidget
                 tooltipText="X (Formerly Twitter)"
                 duration="duration-500"
@@ -62,7 +62,7 @@ function MainSection1() {
                 <AiOutlineX size={32}/>
               </TooltipWidget>
             </li>
-            <li className="w-[120px] left-0">
+            <li>
               <TooltipWidget
                 tooltipText="LinkedIn"
                 duration="duration-500"
@@ -76,7 +76,7 @@ function MainSection1() {
       </div>
 
       <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-        <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[350px] max-w-[200] rounded-full opacity-70"/>
+        <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[350px] max-w-[200] rounded-full opacity-70 p-5"/>
       </FadeSection>
 
     </div>
