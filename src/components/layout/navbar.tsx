@@ -7,7 +7,7 @@ import TooltipWidget from '../ui/tooltip';
 
 function Navbar() {
     const [isNavbar, setIsNavbar] = useState(true);
-    const { isDark, setIsDark } = useTheme();
+    const {isDark, setIsDark } = useTheme();
 
     const handleNavbar = () => {
       setIsNavbar(!isNavbar);
@@ -38,7 +38,7 @@ function Navbar() {
             <div className="flex items-center justify-center w-8" onClick={() => setIsDark(!isDark)}>
               {isDark ? <CiDark size={30} className="w-[24px]"/> : <CiLight size={30} className="w-[24px]"/>}
             </div>
-            <div className="flex items-center justify-center w-8 md:hidden" onClick={handleNavbar}>
+            <div className="flex items-center justify-center w-8 lg:hidden" onClick={handleNavbar}>
               {isNavbar ? <AiOutlineMenu size={22} /> : <AiOutlineClose size={22} />}
             </div>
           </div>

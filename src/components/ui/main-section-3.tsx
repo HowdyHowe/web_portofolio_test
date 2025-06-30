@@ -21,7 +21,7 @@ function MainSection3() {
           </p>
         </FadeSection>
 
-        <div className="absolute w-full h-[200px] z-[-1] pointer-events-none ">
+        <div className="absolute w-full h-[200px] z-0 pointer-events-none ">
           <div className="absolute top-0 left-0 w-full h-full">
             <RadioWave time="animate-radioWave1 mt-5" />
           </div>
