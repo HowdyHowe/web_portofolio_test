@@ -37,8 +37,8 @@ function MainSection1() {
           </FadeSection>
           <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1300}>
             <a href="https://google.com/" target="_blank" rel="noopener noreferer">
-              <div className="flex items-center justify-center w-[250px] h-[50px] mt-5 rounded-2xl border border-spacing-1 border-[#d1d1d1] hover:border-blue-500 duration-1000">
-                Download CV Saya <LiaDownloadSolid size={25} className="ml-5"/>
+              <div className="flex items-center justify-center w-[250px] h-[50px] mt-5 rounded-2xl border border-spacing-1 border-[#d1d1d1] hover:border-[#872341] duration-1000">
+                <p className="font-jetbrainsmono text-base"> Download CV Saya </p><LiaDownloadSolid size={25} className="ml-5"/>
               </div>
             </a>
           </FadeSection>
