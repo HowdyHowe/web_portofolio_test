@@ -17,11 +17,10 @@ function MainSection1() {
       <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
       <div className="flex flex-col items-start justify-between mt-[150px] w-[50%]  m-6">
-
         <div>
-          {/* <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1500}>
-            <div className="w-[20%] h-[10px] bg-[#d1d1d1] rounded-2xl mb-5 rotate-90"/>
-          </FadeSection> */}
+          <FadeSection from={"translate-x-0"} to={"translate-y-0"} durationMs={1500}>
+            <div className="w-[50%] h-[10px] bg-[#872341] rounded-2xl mb-5"/>
+          </FadeSection>
           <FadeSection from={"translate-x-[-50px]"} to={"translate-y-0"} durationMs={1500}>
             <p className="font-jetbrainsmono text-base">
               Hi, Selamat Datang
@@ -37,7 +36,7 @@ function MainSection1() {
           </FadeSection>
           <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1300}>
             <a href="https://google.com/" target="_blank" rel="noopener noreferer">
-              <div className="flex items-center justify-center w-[250px] h-[50px] mt-5 rounded-2xl border border-spacing-1 border-[#d1d1d1] hover:border-[#872341] duration-1000">
+              <div className="flex items-center justify-center w-[250px] h-[50px] mt-5 bg-[#872341] rounded-2xl border border-spacing-1 border-[#2c2c2c] hover:border-[#d1d1d1] duration-500">
                 <p className="font-jetbrainsmono text-base"> Download CV Saya </p><LiaDownloadSolid size={25} className="ml-5"/>
               </div>
             </a>
