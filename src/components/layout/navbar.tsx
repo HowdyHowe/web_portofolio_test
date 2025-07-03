@@ -43,7 +43,7 @@ function Navbar() {
             </div>
           </div>
 
-          <div className={`fixed w-full h-full left-0 rounded-xl  ${!isNavbar ? "top-[40px] ease-in-out duration-300" : "-top-full ease-in-out duration-300"} md:hidden`} style={{ backgroundImage: isDark ? "url('/src/assets/images/background-sidebar-light.png')": "url('/src/assets/images/background-sidebar-dark.png')"}}/>
+          <div className={`fixed w-full h-full left-0 rounded-xl  ${!isNavbar ? "top-[40px] ease-in-out duration-300" : "-top-full ease-in-out duration-300"} lg:hidden`} style={{ backgroundImage: isDark ? "url('/src/assets/images/background-sidebar-light.png')": "url('/src/assets/images/background-sidebar-dark.png')"}}/>
           <div className={!isNavbar ? "dropdown opacity-100 ease-in-out duration-500 pointer-events-auto" : "dropdown opacity-0 ease-in-out duration-300 pointer-events-none"}>
             <ul className="dropdown-content">
               <li className="dropdown-content-item">

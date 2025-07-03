@@ -4,7 +4,7 @@
 
     // menu navbar
     .navbar-content{
-        @apply hidden md:flex list-none;
+        @apply hidden lg:flex list-none;
     }
 
     // item dari navbar
@@ -14,7 +14,7 @@
 
     // dropdown website
     .dropdown{
-        @apply fixed flex flex-col items-center top-[50px] left-0 md:hidden;
+        @apply fixed flex flex-col items-center top-[50px] left-0 lg:hidden;
     }
 
     // menu dropdown

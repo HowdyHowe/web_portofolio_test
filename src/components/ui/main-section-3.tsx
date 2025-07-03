@@ -1,10 +1,9 @@
+import { useState } from "react";
 import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
-import { DiJavascript } from "react-icons/di";
-import { SiKotlin, SiPhp } from "react-icons/si";
 import TooltipWidget from "./tooltip";
-import { useState } from "react";
+import { SiJavascript, SiKotlin, SiPhp} from "react-icons/si";
 import { FaDartLang, FaPython } from "react-icons/fa6";
 import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
@@ -64,9 +63,12 @@ function MainSection3() {
 
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
-        <FadeSection from="translate-y-0" to="translate-y-0" durationMs={1600}>
+        <FadeSection from="translate-y-[30px]" to="translate-y-0" durationMs={1600}>
           <div className="mt-[55px]">
             <p className="font-jetbrainsmono text-5xl">My Project</p>
+            <FadeSection from={"translate-y-[30px]"} to={"translate-y-0"} durationMs={1500}>
+            <div className="w-[500px] h-[20px] bg-[#F05941] rounded-e-3xl mt-1"/>
+          </FadeSection>
           </div>
         </FadeSection>
 
@@ -94,7 +96,7 @@ function MainSection3() {
                 }}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "kotlin" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiKotlin size={31} className={lang == "kotlin" ? "fill-[#872341] duration-500" : ""}/>
+                  <SiKotlin size={30} className={lang == "kotlin" ? "fill-[#872341] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
@@ -105,7 +107,7 @@ function MainSection3() {
                 onClick={() => changeLang("php")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "php" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiPhp size={45} className={lang == "php" ? "fill-[#872341] duration-500" : ""}/>
+                  <SiPhp size={42} className={lang == "php" ? "fill-[#872341] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
@@ -116,7 +118,7 @@ function MainSection3() {
                 onClick={() => changeLang("javascript")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "javascript" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <DiJavascript size={43} className={lang == "javascript" ? "fill-[#872341] duration-500" : ""}/>
+                  <SiJavascript size={38} className={lang == "javascript" ? "fill-[#872341] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>

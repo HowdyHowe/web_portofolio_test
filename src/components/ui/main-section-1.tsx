@@ -5,6 +5,7 @@ import FadeSection from "./fade";
 import Fireflies from "./fireflies";
 import { AiOutlineX } from "react-icons/ai";
 import TooltipWidget from "./tooltip";
+import Alert from "./alert";
 
 function MainSection1() {
   const {isDark} = useTheme();
@@ -16,11 +17,9 @@ function MainSection1() {
           style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
       <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
-      <div className="flex flex-col items-start justify-between mt-[150px] w-[50%]  m-6">
+      <div className="flex flex-col items-start justify-between mt-[150px] w-[60%]  m-6">
+          <Alert/>
         <div>
-          <FadeSection from={"translate-x-0"} to={"translate-y-0"} durationMs={1500}>
-            <div className="w-[50%] h-[10px] bg-[#872341] rounded-2xl mb-5"/>
-          </FadeSection>
           <FadeSection from={"translate-x-[-50px]"} to={"translate-y-0"} durationMs={1500}>
             <p className="font-jetbrainsmono text-base">
               Hi, Selamat Datang
@@ -31,15 +30,18 @@ function MainSection1() {
               Saya Toba Amiruddin Sitorus
             </p>
           </FadeSection>
-          <FadeSection from={"translate-y-[70px]"} to={"translate-y-0"} durationMs={2000}>
-            <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm pt-8 text-justify" />
-          </FadeSection>
+          <div className="flex flex-row">
+            <FadeSection from={"translate-x-0"} to={"translate-y-0"} durationMs={1500}>
+              <div className="w-[75px] h-[5px] bg-[#F05941] rounded-2xl mt-[47px] mr-2"/>
+            </FadeSection>
+            <FadeSection from={"translate-y-[70px]"} to={"translate-y-0"} durationMs={2000}>
+              <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm mt-[40px] text-justify" />
+            </FadeSection>
+          </div>
           <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1300}>
-            <a href="https://google.com/" target="_blank" rel="noopener noreferer">
               <div className="flex items-center justify-center w-[250px] h-[50px] mt-5 bg-[#872341] rounded-2xl border border-spacing-1 border-[#2c2c2c] hover:border-[#d1d1d1] duration-500">
                 <p className="font-jetbrainsmono text-base"> Download CV Saya </p><LiaDownloadSolid size={25} className="ml-5"/>
               </div>
-            </a>
           </FadeSection>
         </div>
 
