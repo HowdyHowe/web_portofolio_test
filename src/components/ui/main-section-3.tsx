@@ -146,7 +146,7 @@ function MainSection3() {
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
                   >
-                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={2200}>
+                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
                       <p className="font-jetbrainsmono text-3xl font-bold truncate duration-300">{index + 1}. {lang}</p>
                       <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks</p>
                     </FadeSection>
@@ -162,7 +162,7 @@ function MainSection3() {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="flex flex-col items-center justify-center w-[500px] h-[500px] bg-white rounded-xl m-5 duration-300">
-                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={2500}>
+                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1800}>
                       <p>{curLang[index].title}</p>
                       <p>{curLang[index].content}</p>
                     </FadeSection>
