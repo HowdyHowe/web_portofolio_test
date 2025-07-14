@@ -67,8 +67,8 @@ function MainSection3() {
           <div className="mt-[55px]">
             <p className="font-jetbrainsmono text-5xl">My Project</p>
             <FadeSection from={"translate-y-[30px]"} to={"translate-y-0"} durationMs={1500}>
-            <div className="w-[500px] h-[20px] bg-[#F05941] rounded-e-3xl mt-1"/>
-          </FadeSection>
+              <div className="w-[500px] h-[20px] bg-[#F05941] rounded-e-3xl mt-1"/>
+            </FadeSection>
           </div>
         </FadeSection>
 

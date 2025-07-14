@@ -20,10 +20,10 @@ const languageList = [
 
 function Card(){
     return(
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-7 gap-5">
                 {
-                    languageList.map((language) => (
-                        <FadeSection key={language} from="translate-y-[20px]" to="translate-p-0" durationMs={1300}>
+                    languageList.map((language, index) => (
+                        <FadeSection key={language} from="translate-y-[20px]" to="translate-p-0" durationMs={(index + 2) * 250}>
                             <div className="flex flex-col items-center justify-center w-[170px] h-[170px] bg-[#872341] rounded-xl border border-spacing-1 border-[#2c2c2c] hover:border-[#d1d1d1] duration-500">
                                 <img src={`/src/assets/images/${language}.svg`} alt={language} className="w-[60px] rounded-md"/>
                                 <p className="font-jetbrainsmono text-xl mt-2">{language}</p>

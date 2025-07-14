@@ -5,7 +5,6 @@ import FadeSection from "./fade";
 import Fireflies from "./fireflies";
 import { AiOutlineX } from "react-icons/ai";
 import TooltipWidget from "./tooltip";
-import Alert from "./alert";
 
 function MainSection1() {
   const {isDark} = useTheme();
@@ -18,7 +17,6 @@ function MainSection1() {
       <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
       <div className="flex flex-col items-start justify-between mt-[150px] w-[60%]  m-6">
-          <Alert/>
         <div>
           <FadeSection from={"translate-x-[-50px]"} to={"translate-y-0"} durationMs={1500}>
             <p className="font-jetbrainsmono text-base">
@@ -31,7 +29,7 @@ function MainSection1() {
             </p>
           </FadeSection>
           <div className="flex flex-row">
-            <FadeSection from={"translate-x-0"} to={"translate-y-0"} durationMs={1500}>
+            <FadeSection from={"translate-x-[30px]"} to={"translate-y-0"} durationMs={1500}>
               <div className="w-[75px] h-[5px] bg-[#F05941] rounded-2xl mt-[47px] mr-2"/>
             </FadeSection>
             <FadeSection from={"translate-y-[70px]"} to={"translate-y-0"} durationMs={2000}>
@@ -45,8 +43,14 @@ function MainSection1() {
           </FadeSection>
         </div>
 
+        <div className="grid grid-cols-3 w-full h-[200px] z-10">
+          <div className="flex items-center justify-center">years of experience</div>
+          <div className="flex items-center justify-center">project completed</div>
+          <div className="flex items-center justify-center">client</div>
+        </div>
+
         <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
-          <ul className="flex flex-row items-center gap-12 mt-[150px]">
+          <ul className="flex flex-row items-center gap-6">
             <li>
               <TooltipWidget
                 tooltipText="Github"
