@@ -89,7 +89,7 @@ function FadeSection({ children, durationMs = 700, from, to }: FadeSectionProps)
     <div
       ref={ref}
       className={`transition-all transform ${
-        isVisible ? `opacity-100 ${to}` : `opacity-100 ${from}`
+        isVisible ? `opacity-100 ${to}` : `opacity-0 ${from}`
       } ease-in-out`}
       style={{ transitionDuration: `${durationMs}ms` }}
     >

@@ -63,14 +63,6 @@ function MainSection3() {
 
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
-        <FadeSection from="translate-y-[30px]" to="translate-y-0" durationMs={1600}>
-          <div className="mt-[55px]">
-            <p className="font-jetbrainsmono text-5xl">My Project</p>
-            <FadeSection from={"translate-y-[30px]"} to={"translate-y-0"} durationMs={1500}>
-              <div className="w-[500px] h-[20px] bg-[#F05941] rounded-e-3xl mt-1"/>
-            </FadeSection>
-          </div>
-        </FadeSection>
 
         <div className="flex flex-row items-center justify-center relative w-full h-full snap-start overflow-hidden">
           <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
@@ -136,7 +128,7 @@ function MainSection3() {
           </div>
 
           <div className="flex flex-col items-center justify-center h-[95%] w-[80%] text-[#2c2c2c] bg-[#d1d1d1] rounded-e-3xl overflow-hidden">
-            <div className="flex flex-row items-center justify-center h-[100%] w-[100%]">
+            <div className="flex flex-row items-center justify-evenly h-[100%] w-[100%]">
               <div className="flex flex-col justify-start w-[50%] h-[500px] rounded-xl m-5 py-2 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -147,8 +139,18 @@ function MainSection3() {
                   transition={{ duration: 0.5 }}
                   >
                     <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
-                      <p className="font-jetbrainsmono text-3xl font-bold truncate duration-300">{index + 1}. {lang}</p>
-                      <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks</p>
+                      <div className="grid grid-rows-3 w-full h-[500px]">
+                        <div className="flex items-center justify-start">
+                          <p className="font-jetbrainsmono text-3xl font-bold truncate duration-300">{index + 1}. {lang}</p>
+                        </div>
+                        <div className="flex items-center justify-start">
+                          <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks</p>
+                        </div>
+                        <div className="flex flex-row items-center justify-start">
+                          <p>Logo 1</p>
+                          <p>Logo 2</p>
+                        </div>
+                      </div>
                     </FadeSection>
                   </motion.div>
                 </AnimatePresence>
@@ -161,12 +163,12 @@ function MainSection3() {
                   exit={{opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="flex flex-col items-center justify-center w-[500px] h-[500px] bg-white rounded-xl m-5 duration-300">
-                    <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1800}>
+                <div className="flex grid-cols-3 items-center justify-center w-[500px] h-[500px] bg-white rounded-xl m-5 duration-300">
+                  <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1800}>
                       <p>{curLang[index].title}</p>
                       <p>{curLang[index].content}</p>
-                    </FadeSection>
-                  </div>
+                  </FadeSection>
+                </div>
                 </motion.div>
               </AnimatePresence>
             </div>

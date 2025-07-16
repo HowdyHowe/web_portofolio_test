@@ -17,7 +17,7 @@ function MainSection1() {
             style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
-        <div className="flex flex-col items-start justify-between mt-[150px] w-[50%]  m-6">
+        <div className="flex flex-col items-start justify-between mt-[150px] w-[55%] m-6">
           <div>
             <FadeSection from={"translate-x-[-80px]"} to={"translate-y-0"} durationMs={1500}>
               <p className="font-jetbrainsmono text-base">
@@ -38,14 +38,49 @@ function MainSection1() {
               </FadeSection>
             </div>
             <FadeSection from={"translate-y-[80px]"} to={"translate-y-0"} durationMs={1300}>
-                <div className="flex items-center justify-center w-[250px] h-[50px] my-5 bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                <div className="flex items-center justify-center w-[250px] h-[50px] bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
                   <p className="font-jetbrainsmono text-base"> Download CV Saya </p><LiaDownloadSolid size={25} className="ml-5"/>
                 </div>
             </FadeSection>
+
+            <div className="grid grid-cols-4 h-[150px] z-10">
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono">Years of Experience</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono text-6xl">2+</p>
+                </FadeSection>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono">Projects</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono text-6xl">25</p>
+                </FadeSection>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono">Clients</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono text-6xl">14</p>
+                </FadeSection>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono">Language Mastered</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono text-6xl">5</p>
+                </FadeSection>
+              </div>
+            </div>
           </div>
 
           <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
-            <ul className="flex flex-row items-center gap-[75px]">
+            <ul className="flex flex-row items-center mt-[75px] gap-[75px]">
               <li>
                 <TooltipWidget
                   tooltipText="Github"
@@ -91,40 +126,6 @@ function MainSection1() {
         </FadeSection>
       </div>
 
-      <div className="grid grid-cols-4 w-full h-[150px] mx-[30%] z-10">
-        <div className="flex flex-col items-center justify-center">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono">Years of Experience</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono text-6xl">2+</p>
-          </FadeSection>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono">Projects</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono text-6xl">25</p>
-          </FadeSection>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono">Clients</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono text-6xl">14</p>
-          </FadeSection>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono">Language Mastered</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono text-6xl">5</p>
-          </FadeSection>
-        </div>
-      </div>
     </div>
   );
 }
