@@ -15,18 +15,17 @@ const languageList = [
     "ExpressJs",
     "MySql",
     "Sqlite",
-    "PostgreSql",
 ];
 
 function Card(){
     return(
-            <div className="grid grid-cols-7 gap-5">
+            <div className="grid grid-cols-6 gap-4">
                 {
                     languageList.map((language, index) => (
-                        <FadeSection key={language} from="translate-y-[20px]" to="translate-p-0" durationMs={(index + 2) * 250}>
-                            <div className="flex flex-col items-center justify-center w-[170px] h-[170px] bg-[#872341] rounded-xl border border-spacing-1 border-[#2c2c2c] hover:border-[#d1d1d1] duration-500">
-                                <img src={`/src/assets/images/${language}.svg`} alt={language} className="w-[60px] rounded-md"/>
-                                <p className="font-jetbrainsmono text-xl mt-2">{language}</p>
+                        <FadeSection key={language} from="translate-y-[80px]" to="translate-p-0" durationMs={600 + (index * 100)}>
+                            <div className="flex relative flex-col items-center justify-center w-[200px] h-[200px] bg-[#87234100] rounded-xl border-2 border-[#872341] hover:border-[#d1d1d1] duration-500">
+                                <img src={`/src/assets/images/${language}.svg`} alt={language} className="w-[60px] rounded-md "/>
+                                <div className="flex items-center justify-center absolute bottom-0 left-0 w-[150px] h-[50px] bg-[#d1d1d1] text-[#2c2c2c] rounded-bl-xl font-jetbrainsmono">{language}</div>
                             </div>
                         </FadeSection>
                     ))
@@ -40,7 +39,7 @@ function MainSection2() {
     const {isDark} = useTheme()
 
     return(
-        <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth">
+        <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden">
 
             <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
             <FadeSection from="translate-y-[30px]" to="translate-y-0" durationMs={1600}>
