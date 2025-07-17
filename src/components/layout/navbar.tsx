@@ -30,8 +30,10 @@ function Navbar() {
           <h1 className="flex items-center justify-center text-xl">TOBA</h1>
           <ul className="navbar-content">
             <li className="navbar-content-item">Home</li>
-            <li className="navbar-content-item">About Me</li>
-            <li className="navbar-content-item">CV</li>
+            <li className="navbar-content-item">Resume</li>
+            <li className="navbar-content-item">Projects</li>
+            <li className="navbar-content-item">About me</li>
+            <li className="navbar-content-item">Contact</li>
           </ul>
 
           <div className="flex items-center justify-center">

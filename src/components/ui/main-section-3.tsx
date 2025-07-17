@@ -66,7 +66,7 @@ function MainSection3() {
 
         <div className="flex flex-row items-center justify-center relative w-full h-full snap-start overflow-hidden">
           <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
-          <div className="flex flex-col items-center justify-around w-[80px] h-[60%] border-2 border-[#F05941] rounded-s-3xl text-center hover:w-[130px] duration-300">
+          <div className="flex flex-col items-center justify-around w-[80px] h-[60%] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
               <TooltipWidget
                 tooltipText="Dart"
@@ -141,12 +141,12 @@ function MainSection3() {
                     <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
                       <div className="grid grid-rows-3 w-full h-[400px]">
                         <div className="flex items-start justify-start">
-                          <p className="font-jetbrainsmono text-3xl font-bold truncate duration-300">{index + 1}. {lang}</p>
+                          <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p>
                         </div>
                         <div className="flex items-start justify-start">
                           <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks</p>
                         </div>
-                        <div className="flex flex-row items-center justify-start border-t">
+                        <div className="flex flex-row items-center justify-start border-t border-[#F05941]">
                           <p>Logo 1</p>
                           <p>Logo 2</p>
                         </div>

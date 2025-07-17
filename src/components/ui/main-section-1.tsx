@@ -19,21 +19,21 @@ function MainSection1() {
 
         <div className="flex flex-col items-start justify-between mt-[150px] w-[55%] m-6">
           <div>
-            <FadeSection from={"translate-x-[-80px]"} to={"translate-y-0"} durationMs={1500}>
+            <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1300}>
               <p className="font-jetbrainsmono text-base">
                 Hi, Selamat Datang
               </p>
             </FadeSection>
-            <FadeSection from={"translate-y-[80px]"} to={"translate-y-0"} durationMs={1500}>
+            <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1500}>
               <p className="font-jetbrainsmono text-5xl ">
                 Saya Toba Amiruddin Sitorus
               </p>
             </FadeSection>
             <div className="flex flex-row">
-              <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1500}>
-                <div className="w-[75px] h-[10px] bg-[#F05941]  rounded-2xl mt-[36px] mr-2"/>
+              <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1700}>
+                <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[37px] mr-2"/>
               </FadeSection>
-              <FadeSection from={"translate-y-[70px]"} to={"translate-y-0"} durationMs={2000}>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={2000}>
                 <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm my-[30px] text-justify" />
               </FadeSection>
             </div>
@@ -87,7 +87,7 @@ function MainSection1() {
                   duration="duration-700"
                   link="https://www.google.com/"
                 >
-                  <LiaGithub size={39} color="#892341"/>
+                  <LiaGithub size={41}/>
                 </TooltipWidget>
               </li>
               <li>
