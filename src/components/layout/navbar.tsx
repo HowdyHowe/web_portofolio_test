@@ -49,38 +49,22 @@ function Navbar() {
           <div className={!isNavbar ? "dropdown opacity-100 ease-in-out duration-500 pointer-events-auto" : "dropdown opacity-0 ease-in-out duration-300 pointer-events-none"}>
             <ul className="dropdown-content">
               <li className="dropdown-content-item">
-              <TooltipWidget
-                tooltipText="Github"
-                duration="duration-500"
-                link="https://www.google.com/"
-              >
-                <LiaGithub size={35}/>
-              </TooltipWidget>
+                <TooltipWidget scale={true} tooltipText="Github" duration="duration-500" link="https://www.google.com/">
+                  <LiaGithub size={35}/>
+                </TooltipWidget>
               </li>
               <li className="dropdown-content-item">
-              <TooltipWidget
-                tooltipText="Instagram"
-                duration="duration-500"
-                link="https://www.google.com/"
-              >
-                <LiaInstagram size={35}/>
-              </TooltipWidget>
+                <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-500" link="https://www.google.com/">
+                  <LiaInstagram size={35}/>
+                </TooltipWidget>
               </li>
               <li className="dropdown-content-item">
-                <TooltipWidget
-                    tooltipText="X (Formerly Twitter)"
-                    duration="duration-500"
-                    link="https://www.google.com/"
-                >
+                <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-500" link="https://www.google.com/">
                   <AiOutlineX size={25}/>
                 </TooltipWidget>
               </li>
               <li className="dropdown-content-item">
-                <TooltipWidget
-                  tooltipText="LinkedIn"
-                  duration="duration-500"
-                  link="https://www.google.com/"
-                >
+                <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-500" link="https://www.google.com/">
                   <LiaLinkedin size={35}/>
                 </TooltipWidget>
               </li>

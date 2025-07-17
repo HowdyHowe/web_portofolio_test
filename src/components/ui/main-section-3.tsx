@@ -7,6 +7,7 @@ import { SiJavascript, SiKotlin, SiPhp} from "react-icons/si";
 import { FaDartLang, FaPython } from "react-icons/fa6";
 import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
+import { LiaGithub } from "react-icons/lia";
 
 const progLanguage = {
   "dart": [
@@ -68,10 +69,7 @@ function MainSection3() {
           <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
           <div className="flex flex-col items-center justify-around w-[80px] h-[60%] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
-              <TooltipWidget
-                tooltipText="Dart"
-                duration="duration-700"
-                onClick={() => changeLang("dart")}
+              <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "dart" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
                   <FaDartLang size={32} className={lang == "dart" ? "fill-[#872341] duration-500" : ""}/>
@@ -79,10 +77,7 @@ function MainSection3() {
               </TooltipWidget>
             </FadeSection>
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1300}>
-              <TooltipWidget
-                tooltipText="Kotlin"
-                duration="duration-700"
-                onClick={() =>  {
+              <TooltipWidget scale={true} tooltipText="Kotlin" duration="duration-700" onClick={() =>  {
                   changeLang("kotlin")
                   setIndex(0)
                 }}
@@ -93,10 +88,7 @@ function MainSection3() {
               </TooltipWidget>
             </FadeSection>
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1600}>
-              <TooltipWidget
-                tooltipText="PHP"
-                duration="duration-700"
-                onClick={() => changeLang("php")}
+              <TooltipWidget scale={true} tooltipText="PHP" duration="duration-700" onClick={() => changeLang("php")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "php" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
                   <SiPhp size={42} className={lang == "php" ? "fill-[#872341] duration-500" : ""}/>
@@ -104,10 +96,7 @@ function MainSection3() {
               </TooltipWidget>
             </FadeSection>
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1900}>
-              <TooltipWidget
-                tooltipText="Javascript"
-                duration="duration-700"
-                onClick={() => changeLang("javascript")}
+              <TooltipWidget scale={true} tooltipText="Javascript" duration="duration-700" onClick={() => changeLang("javascript")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "javascript" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
                   <SiJavascript size={38} className={lang == "javascript" ? "fill-[#872341] duration-500" : ""}/>
@@ -115,10 +104,7 @@ function MainSection3() {
               </TooltipWidget>
             </FadeSection>
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={2200}>
-              <TooltipWidget
-                tooltipText="Python"
-                duration="duration-700"
-                onClick={() => changeLang("python")}
+              <TooltipWidget scale={true} tooltipText="Python" duration="duration-700" onClick={() => changeLang("python")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "border-2 border-[#d1d1d1] rounded-xl duration-500" : ""}`}>
                   <FaPython size={40} className={lang == "python" ? "fill-[#872341] duration-500" : ""}/>
@@ -129,26 +115,27 @@ function MainSection3() {
 
           <div className="flex flex-col items-center justify-center h-[60%] w-[55%] overflow-hidden">
             <div className="flex flex-row items-center justify-evenly h-[100%] w-[100%]">
-              <div className="flex flex-col justify-center w-[50%] h-[400px] rounded-xl m-5 py-2 overflow-hidden">
+              <div className="flex flex-col justify-center w-[50%] h-[400px] rounded-xl m-5 py-2 ">
                 <AnimatePresence mode="wait">
                   <motion.div
-                  key={index}
+                  key={lang}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 50 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                   >
                     <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
                       <div className="grid grid-rows-3 w-full h-[400px]">
                         <div className="flex items-start justify-start">
                           <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p>
                         </div>
-                        <div className="flex items-start justify-start">
-                          <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks</p>
+                        <div className="flex items-start justify-start row-span-2">
+                          <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks </p>
                         </div>
-                        <div className="flex flex-row items-center justify-start border-t border-[#F05941]">
-                          <p>Logo 1</p>
-                          <p>Logo 2</p>
+                        <div className="flex flex-row items-start justify-end border-t border-[#F05941]">
+                          <TooltipWidget scale={true} tooltipText="Go To Github Page" duration="duration-700" link="https://github.com">
+                            <LiaGithub size={50}/>
+                          </TooltipWidget>
                         </div>
                       </div>
                     </FadeSection>
@@ -157,7 +144,7 @@ function MainSection3() {
               </div>
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={index}
+                  key={lang}
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{opacity: 0, x: -50 }}
@@ -176,7 +163,7 @@ function MainSection3() {
             <div className="flex flex-row w-full h-[60px] items-center px-6 py-2">
 
               <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={2200}>
-                <TooltipWidget tooltipText="Previous" duration="duration-700" onClick={prev}>
+                <TooltipWidget scale={true} tooltipText="Previous" duration="duration-700" onClick={prev}>
                   <RxTriangleLeft size={50} className="mr-2 border border-[#d1d1d1] rounded-xl"/>
                 </TooltipWidget>
               </FadeSection>
@@ -186,7 +173,7 @@ function MainSection3() {
               </FadeSection>
 
               <FadeSection from="translate-x-[-30px]" to="translate-y-0" durationMs={2200}>
-                <TooltipWidget tooltipText="Next" duration="duration-700" onClick={next}>
+                <TooltipWidget scale={true} tooltipText="Next" duration="duration-700" onClick={next}>
                   <RxTriangleRight size={50} className="ml-2 border border-[#d1d1d1] rounded-xl"/>
                 </TooltipWidget>
               </FadeSection>

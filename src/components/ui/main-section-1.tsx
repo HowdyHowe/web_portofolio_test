@@ -48,31 +48,31 @@ function MainSection1() {
                 <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
                   <p className="font-jetbrainsmono">Years of Experience</p>
                 </FadeSection>
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
                   <p className="font-jetbrainsmono text-6xl">2+</p>
                 </FadeSection>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1300}>
                   <p className="font-jetbrainsmono">Projects</p>
                 </FadeSection>
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1400}>
                   <p className="font-jetbrainsmono text-6xl">25</p>
                 </FadeSection>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1600}>
                   <p className="font-jetbrainsmono">Clients</p>
                 </FadeSection>
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1600}>
                   <p className="font-jetbrainsmono text-6xl">14</p>
                 </FadeSection>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1900}>
                   <p className="font-jetbrainsmono">Language Mastered</p>
                 </FadeSection>
-                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1800}>
                   <p className="font-jetbrainsmono text-6xl">5</p>
                 </FadeSection>
               </div>
@@ -82,38 +82,22 @@ function MainSection1() {
           <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
             <ul className="flex flex-row items-center mt-[75px] gap-[75px]">
               <li>
-                <TooltipWidget
-                  tooltipText="Github"
-                  duration="duration-700"
-                  link="https://www.google.com/"
-                >
+                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
                   <LiaGithub size={41}/>
                 </TooltipWidget>
               </li>
               <li>
-                <TooltipWidget
-                  tooltipText="Instagram"
-                  duration="duration-700"
-                  link="https://www.google.com/"
-                >
+                <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
                   <LiaInstagram size={42}/>
                 </TooltipWidget>
               </li>
               <li>
-                <TooltipWidget
-                  tooltipText="X (Formerly Twitter)"
-                  duration="duration-700"
-                  link="https://www.google.com/"
-                >
+                <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
                   <AiOutlineX size={32}/>
                 </TooltipWidget>
               </li>
               <li>
-                <TooltipWidget
-                  tooltipText="LinkedIn"
-                  duration="duration-700"
-                  link="https://www.google.com/"
-                >
+                <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
                   <LiaLinkedin size={40}/>
                 </TooltipWidget>
               </li>
