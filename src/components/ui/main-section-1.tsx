@@ -12,7 +12,7 @@ function MainSection1() {
   return (
     <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden">
 
-      <div className="flex flex-row items-center justify-evenly">
+      <div className="flex flex-row-reverse items-center justify-evenly">
         <div className="absolute inset-0 bg-cover bg-center z-0 opacity-0 animate-fadeIn"
             style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
@@ -122,7 +122,7 @@ function MainSection1() {
         </div>
 
         <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-          <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[350px] max-w-[200] rounded-full opacity-70 p-5"/>
+          <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[350px] max-w-[200]  border-2 border-[#F05941] rounded-full opacity-70 p-5"/>
         </FadeSection>
       </div>
 

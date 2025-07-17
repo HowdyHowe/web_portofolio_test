@@ -66,7 +66,7 @@ function MainSection3() {
 
         <div className="flex flex-row items-center justify-center relative w-full h-full snap-start overflow-hidden">
           <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
-          <div className="flex flex-col items-center justify-around w-[80px] h-[95%] bg-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
+          <div className="flex flex-col items-center justify-around w-[80px] h-[60%] border-2 border-[#F05941] rounded-s-3xl text-center hover:w-[130px] duration-300">
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
               <TooltipWidget
                 tooltipText="Dart"
@@ -120,16 +120,16 @@ function MainSection3() {
                 duration="duration-700"
                 onClick={() => changeLang("python")}
               >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "bg-[#D1D1D1] rounded-xl duration-500" : ""}`}>
+                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "border-2 border-[#d1d1d1] rounded-xl duration-500" : ""}`}>
                   <FaPython size={40} className={lang == "python" ? "fill-[#872341] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
           </div>
 
-          <div className="flex flex-col items-center justify-center h-[95%] w-[80%] text-[#2c2c2c] bg-[#d1d1d1] rounded-e-3xl overflow-hidden">
+          <div className="flex flex-col items-center justify-center h-[60%] w-[55%] overflow-hidden">
             <div className="flex flex-row items-center justify-evenly h-[100%] w-[100%]">
-              <div className="flex flex-col justify-start w-[50%] h-[500px] rounded-xl m-5 py-2 overflow-hidden">
+              <div className="flex flex-col justify-center w-[50%] h-[400px] rounded-xl m-5 py-2 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                   key={index}
@@ -139,14 +139,14 @@ function MainSection3() {
                   transition={{ duration: 0.5 }}
                   >
                     <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
-                      <div className="grid grid-rows-3 w-full h-[500px]">
-                        <div className="flex items-center justify-start">
+                      <div className="grid grid-rows-3 w-full h-[400px]">
+                        <div className="flex items-start justify-start">
                           <p className="font-jetbrainsmono text-3xl font-bold truncate duration-300">{index + 1}. {lang}</p>
                         </div>
-                        <div className="flex items-center justify-start">
+                        <div className="flex items-start justify-start">
                           <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks</p>
                         </div>
-                        <div className="flex flex-row items-center justify-start">
+                        <div className="flex flex-row items-center justify-start border-t">
                           <p>Logo 1</p>
                           <p>Logo 2</p>
                         </div>
@@ -163,7 +163,7 @@ function MainSection3() {
                   exit={{opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
                 >
-                <div className="flex grid-cols-3 items-center justify-center w-[500px] h-[500px] bg-white rounded-xl m-5 duration-300">
+                <div className="flex grid-cols-3 items-center justify-center w-[400px] h-[400px] border border-[#872341] rounded-xl m-5 duration-300">
                   <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1800}>
                       <p>{curLang[index].title}</p>
                       <p>{curLang[index].content}</p>
@@ -173,11 +173,11 @@ function MainSection3() {
               </AnimatePresence>
             </div>
 
-            <div className="flex flex-row w-full items-center text-black px-8 py-2">
+            <div className="flex flex-row w-full h-[60px] items-center px-6 py-2">
 
               <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={2200}>
                 <TooltipWidget tooltipText="Previous" duration="duration-700" onClick={prev}>
-                  <RxTriangleLeft size={60}/>
+                  <RxTriangleLeft size={50} className="mr-2 border border-[#d1d1d1] rounded-xl"/>
                 </TooltipWidget>
               </FadeSection>
 
@@ -187,7 +187,7 @@ function MainSection3() {
 
               <FadeSection from="translate-x-[-30px]" to="translate-y-0" durationMs={2200}>
                 <TooltipWidget tooltipText="Next" duration="duration-700" onClick={next}>
-                  <RxTriangleRight size={60}/>
+                  <RxTriangleRight size={50} className="ml-2 border border-[#d1d1d1] rounded-xl"/>
                 </TooltipWidget>
               </FadeSection>
             </div>
