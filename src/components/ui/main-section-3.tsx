@@ -1,187 +1,209 @@
 import { useState } from "react";
+import TextLoader from "../hooks/text-hook";
 import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
+import { BiBook, BiBrain, BiBriefcase, BiCertification,  } from "react-icons/bi";
 import TooltipWidget from "./tooltip";
-import { SiJavascript, SiKotlin, SiPhp} from "react-icons/si";
-import { FaDartLang, FaPython } from "react-icons/fa6";
-import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
-import { LiaGithub } from "react-icons/lia";
 
-const progLanguage = {
-  "dart": [
-    { title: "Dart 1", content: "Swipe me!" },
-    { title: "Dart 2", content: "Nice!" },
-    { title: "Dart 3", content: "Keep going" },
-    { title: "Dart 4", content: "Almost done" },
-    { title: "Dart 5", content: "Great!" },
-  ],
- "kotlin": [
-    { title: "Kotlin 1", content: "Swipe me!" },
-    { title: "Kotlin 2", content: "Nice!" },
-    { title: "Kotlin 3", content: "Keep going" },
-    { title: "Kotlin 4", content: "Almost done" },
-    { title: "Kotlin 5", content: "Great!" },
-  ],
-  "php": [
-    { title: "PHP 1", content: "Swipe me!" },
-    { title: "PHP 2", content: "Nice!" },
-    { title: "PHP 3", content: "Keep going" },
-    { title: "PHP 4", content: "Almost done" },
-    { title: "PHP 5", content: "Great!" },
-  ],
-  "javascript": [
-    { title: "Javascript 1", content: "Swipe me!" },
-    { title: "Javascript 2", content: "Nice!" },
-    { title: "Javascript 3", content: "Keep going" },
-    { title: "Javascript 4", content: "Almost done" },
-  ],
-  "python": [
-    { title: "Python 1", content: "Swipe me!" },
-    { title: "Python 2", content: "Nice!" },
-    { title: "Python 3", content: "Keep going" },
-    { title: "Python 4", content: "Almost done" },
-    { title: "Python 5", content: "Great!" },
-  ],
-};
+
+const educationsList = [
+    {organizer: "Contoh PT", event:"Contoh Kegiatan 1", year:"2020 - 2022"},
+    {organizer: "Contoh PT", event:"Contoh Kegiatan 2", year:"2020 - 2022"},
+    {organizer: "Contoh PT", event:"Contoh Kegiatan 3", year:"2020 - 2022"},
+    {organizer: "Contoh PT", event:"Contoh Kegiatan 4", year:"2020 - 2022"},
+    {organizer: "Contoh PT", event:"Contoh Kegiatan 5", year:"2020 - 2022"},
+    {organizer: "Contoh PT", event:"Contoh Kegiatan 6", year:"2020 - 2022"}
+]
+
+const experiencesList = [
+    {organizer: "Contoh Pengalaman", event:"Contoh Pengalaman 1", year:"2020 - 2022"},
+    {organizer: "Contoh Pengalaman", event:"Contoh Pengalaman 2", year:"2020 - 2022"},
+    {organizer: "Contoh Pengalaman", event:"Contoh Pengalaman 3", year:"2020 - 2022"},
+    {organizer: "Contoh Pengalaman", event:"Contoh Pengalaman 4", year:"2020 - 2022"},
+    {organizer: "Contoh Pengalaman", event:"Contoh Pengalaman 5", year:"2020 - 2022"},
+    {organizer: "Contoh Pengalaman", event:"Contoh Pengalaman 6", year:"2020 - 2022"}
+]
+
+const languageList = [
+    "Python",
+    "Flask",
+    "Flutter",
+    "Javascript",
+    "Typescript",
+    "Kotlin",
+    "React",
+    "Git",
+    "Ubuntu",
+    "ExpressJs",
+    "MySql",
+    "Sqlite",
+]
+
+const certificationsList = [
+    {organizer: "Contoh Sertifikat", event:"Contoh Sertifikat 1", year:"2020 - 2022"},
+    {organizer: "Contoh Sertifikat", event:"Contoh Sertifikat 2", year:"2020 - 2022"},
+    {organizer: "Contoh Sertifikat", event:"Contoh Sertifikat 3", year:"2020 - 2022"},
+    {organizer: "Contoh Sertifikat", event:"Contoh Sertifikat 4", year:"2020 - 2022"},
+    {organizer: "Contoh Sertifikat", event:"Contoh Sertifikat 5", year:"2020 - 2022"},
+    {organizer: "Contoh Sertifikat", event:"Contoh Sertifikat 6", year:"2020 - 2022"}
+]
+
+function Card({category}: {category:string}) {
+    switch(category) {
+        case "Educations":
+            return <EducationsCard/>
+        case "Experiences":
+            return <ExperiencesCard/>
+        case "Skills":
+            return <SkillsCard/>
+        case "Certifications":
+            return <CertificationsCard/>
+    }
+}
+
+function EducationsCard() {
+    return (
+        <FadeSection from="translate-y-[80px]" to="translate-p-0" durationMs={700}>
+            <div className="grid grid-cols-2 gap-4 font-jetbrainsmono">
+                {
+                    educationsList.map(({organizer, event, year}) => (
+                            <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                                <p className="text-sm">{organizer}</p>
+                                <p className="text-xl">{event}</p>
+                                <p className="text-xs">• {year}</p>
+                            </div>
+                    ))
+                }
+            </div>
+        </FadeSection>
+    )
+}
+
+function ExperiencesCard() {
+    return (
+        <FadeSection from="translate-y-[80px]" to="translate-p-0" durationMs={700}>
+            <div className="grid grid-cols-2 gap-4 font-jetbrainsmono">
+                {
+                    experiencesList.map(({organizer, event, year}) => (
+                            <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                                <p className="text-sm">{organizer}</p>
+                                <p className="text-xl">{event}</p>
+                                <p className="text-xs">• {year}</p>
+                            </div>
+                    ))
+                }
+            </div>
+        </FadeSection>
+    )
+}
+
+function SkillsCard(){
+    return(
+            <div className="grid grid-cols-5 gap-4">
+                {
+                    languageList.map((language, index) => (
+                        <FadeSection key={language} from="translate-y-[80px]" to="translate-p-0" durationMs={700 + (index * 100)}>
+                            <div className="flex flex-col items-center justify-center w-[100px] h-[100px] bg-[#87234100] rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                                <img src={`/src/assets/images/${language}.svg`} alt={language} className="w-[50px] rounded-md "/>
+                            </div>
+                        </FadeSection>
+                    ))
+                }
+            </div>
+    );
+}
+
+function CertificationsCard() {
+    return (
+        <FadeSection from="translate-y-[80px]" to="translate-p-0" durationMs={700}>
+            <div className="grid grid-cols-2 gap-4 font-jetbrainsmono">
+                {
+                    certificationsList.map(({organizer, event, year}) => (
+                            <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                                <p className="text-sm">{organizer}</p>
+                                <p className="text-xl">{event}</p>
+                                <p className="text-xs">• {year}</p>
+                            </div>
+                    ))
+                }
+            </div>
+        </FadeSection>
+    )
+}
+
 
 function MainSection3() {
-  const {isDark} = useTheme();
-  const [index, setIndex] = useState(0);
-  const [lang, setLang] = useState<keyof typeof progLanguage>("dart")
 
-  const curLang = progLanguage[lang]
-  const next = () => setIndex((index + 1) % curLang.length)
-  const prev = () => setIndex((index - 1 + curLang.length) % curLang.length)
+    const {isDark} = useTheme()
+    const [curInfo, setInfo] = useState("Educations")
 
-  const changeLang = (language:keyof typeof progLanguage) => {
-    if (lang != language) {
-      setLang(language)
-      setIndex(0)
+    const changeInfo = (info:string) => {
+        setInfo(info)
     }
-  }
 
-    return (
-      <div className="flex flex-col items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
+    return(
+        <div className="flex flex-row items-center justify-center w-full h-screen relative snap-start scroll-smooth overflow-hidden">
+            <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
 
-        <div className="flex flex-row items-center justify-center relative w-full h-full snap-start overflow-hidden">
-          <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
-          <div className="flex flex-col items-center justify-around w-[80px] h-[60%] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
-              <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "dart" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <FaDartLang size={32} className={lang == "dart" ? "fill-[#872341] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1300}>
-              <TooltipWidget scale={true} tooltipText="Kotlin" duration="duration-700" onClick={() =>  {
-                  changeLang("kotlin")
-                  setIndex(0)
-                }}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "kotlin" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiKotlin size={30} className={lang == "kotlin" ? "fill-[#872341] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1600}>
-              <TooltipWidget scale={true} tooltipText="PHP" duration="duration-700" onClick={() => changeLang("php")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "php" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiPhp size={42} className={lang == "php" ? "fill-[#872341] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1900}>
-              <TooltipWidget scale={true} tooltipText="Javascript" duration="duration-700" onClick={() => changeLang("javascript")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "javascript" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiJavascript size={38} className={lang == "javascript" ? "fill-[#872341] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={2200}>
-              <TooltipWidget scale={true} tooltipText="Python" duration="duration-700" onClick={() => changeLang("python")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "border-2 border-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <FaPython size={40} className={lang == "python" ? "fill-[#872341] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-          </div>
+            <div className="flex flex-col w-[20%] items-start justify-center">
+                <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1300}>
+                    <TooltipWidget scale={false} tooltipText="Educations" duration="duration-500" onClick={() => changeInfo("Educations")}>
+                        <div className={`flex items-center justify-center h-[50px] my-2 bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500 ${curInfo == "Educations" ? "w-[300px]" : "w-[100px]"}`}>
+                            <BiBook size={20} className="mr-2"/>
+                            {curInfo == "Educations" ? <p className="font-jetbrainsmono text-base">Educations</p> : <p className="font-jetbrainsmono text-base">Edu</p>}
+                        </div>
+                    </TooltipWidget>
+                </FadeSection>
+                <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1500}>
+                    <TooltipWidget scale={false} tooltipText="Experiences" duration="duration-500" onClick={() => changeInfo("Experiences")}>
+                        <div className={`flex items-center justify-center h-[50px] my-2 bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500 ${curInfo == "Experiences" ? "w-[300px]" : "w-[100px]"}`}>
+                            <BiBriefcase size={20} className="mr-2"/>
+                            {curInfo == "Experiences" ? <p className="font-jetbrainsmono text-base">Experiences</p> : <p className="font-jetbrainsmono text-base">Exp</p>}
+                        </div>
+                    </TooltipWidget>
+                </FadeSection>
+                <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1700}>
+                    <TooltipWidget scale={false} tooltipText="Skills" duration="duration-500" onClick={() => changeInfo("Skills")}>
+                        <div className={`flex items-center justify-center h-[50px] my-2 bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500 ${curInfo == "Skills" ? "w-[300px]" : "w-[100px]"}`}>
+                            <BiBrain size={20} className="mr-2"/>
+                            {curInfo == "Skills" ? <p className="font-jetbrainsmono text-base">Skills</p> : <p className="font-jetbrainsmono text-base">Skill</p>}
+                        </div>
+                    </TooltipWidget>
+                </FadeSection>
+                <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1900}>
+                    <TooltipWidget scale={false} tooltipText="Certifications" duration="duration-500" onClick={() => changeInfo("Certifications")}>
+                        <div className={`flex items-center justify-center h-[50px] my-2 bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500 ${curInfo == "Certifications" ? "w-[300px]" : "w-[100px]"}`}>
+                            <BiCertification size={20} className="mr-2"/>
+                            {curInfo == "Certifications" ? <p className="font-jetbrainsmono text-base">Certifications</p> : <p className="font-jetbrainsmono text-base">Cert</p>}
+                        </div>
+                    </TooltipWidget>
+                </FadeSection>
+            </div>
 
-          <div className="flex flex-col items-center justify-center h-[60%] w-[55%] overflow-hidden">
-            <div className="flex flex-row items-center justify-evenly h-[100%] w-[100%]">
-              <div className="flex flex-col justify-center w-[50%] h-[400px] rounded-xl m-5 py-2 ">
+            <div className="flex flex-col w-[35%] h-[600px] items-start justify-between">
                 <AnimatePresence mode="wait">
-                  <motion.div
-                  key={lang}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 50 }}
-                  transition={{ duration: 0.3 }}
-                  >
-                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
-                      <div className="grid grid-rows-3 w-full h-[400px]">
-                        <div className="flex items-start justify-start">
-                          <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p>
+                    <motion.div key={curInfo} initial={{opacity:0, x:50}} animate={{opacity:1, x:0}} exit={{opacity:0, x:50}} transition={{duration:0.4}}>
+                        <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1300}>
+                            <p className="text-4xl font-jetbrainsmono">{curInfo}</p>
+                        </FadeSection>
+                        <div className="flex flex-row h-[200px]">
+                            <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1500}>
+                                <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[37px] mr-2"/>
+                            </FadeSection>
+                            <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1700}>
+                                <TextLoader file={`/src/assets/texts/${curInfo}.txt`} cname="font-jetbrainsmono text-sm my-[30px]" />
+                            </FadeSection>
                         </div>
-                        <div className="flex items-start justify-start row-span-2">
-                          <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks </p>
+                        <div className="overflow-auto h-[350px] scrollbar-thin scrollbar-thumb-[#F05941] scrollbar-track-transparent">
+                            <Card category={curInfo}/>
                         </div>
-                        <div className="flex flex-row items-start justify-end border-t border-[#F05941]">
-                          <TooltipWidget scale={true} tooltipText="Go To Github Page" duration="duration-700" link="https://github.com">
-                            <LiaGithub size={50}/>
-                          </TooltipWidget>
-                        </div>
-                      </div>
-                    </FadeSection>
-                  </motion.div>
+                    </motion.div>
                 </AnimatePresence>
-              </div>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={lang}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5 }}
-                >
-                <div className="flex grid-cols-3 items-center justify-center w-[400px] h-[400px] border border-[#872341] rounded-xl m-5 duration-300">
-                  <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1800}>
-                      <p>{curLang[index].title}</p>
-                      <p>{curLang[index].content}</p>
-                  </FadeSection>
-                </div>
-                </motion.div>
-              </AnimatePresence>
             </div>
-
-            <div className="flex flex-row w-full h-[60px] items-center px-6 py-2">
-
-              <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={2200}>
-                <TooltipWidget scale={true} tooltipText="Previous" duration="duration-700" onClick={prev}>
-                  <RxTriangleLeft size={50} className="mr-2 border border-[#d1d1d1] rounded-xl"/>
-                </TooltipWidget>
-              </FadeSection>
-
-              <FadeSection from="translate-y-[30px]" to="translate-y-0" durationMs={1800}>
-                <p className="flex items-center justify-center pb-2 font-jetbrainsmono text-xl duration-300">{index + 1} / {curLang.length}</p>
-              </FadeSection>
-
-              <FadeSection from="translate-x-[-30px]" to="translate-y-0" durationMs={2200}>
-                <TooltipWidget scale={true} tooltipText="Next" duration="duration-700" onClick={next}>
-                  <RxTriangleRight size={50} className="ml-2 border border-[#d1d1d1] rounded-xl"/>
-                </TooltipWidget>
-              </FadeSection>
-            </div>
-          </div>
         </div>
-    </div>
-    );
-  }
+    )
+}
 
-  export default MainSection3;
+export default MainSection3;
