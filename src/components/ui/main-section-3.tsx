@@ -186,7 +186,9 @@ function MainSection3() {
                 <AnimatePresence mode="wait">
                     <motion.div key={curInfo} initial={{opacity:0, x:50}} animate={{opacity:1, x:0}} exit={{opacity:0, x:50}} transition={{duration:0.4}}>
                         <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1300}>
-                            <p className="text-4xl font-jetbrainsmono">{curInfo}</p>
+                            <span className="font-jetbrainsmono text-6xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
+                                {curInfo}
+                            </span>
                         </FadeSection>
                         <div className="flex flex-row h-[200px]">
                             <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1500}>

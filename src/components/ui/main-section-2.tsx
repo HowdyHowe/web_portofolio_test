@@ -21,8 +21,8 @@ function MainSection2() {
           <div className="flex flex-col items-start justify-start w-[600px]">
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1400}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <BiCodeAlt size={40} className="min-w-[40px]"/>
-                <p className="font-jetbrainsmono text-2xl ml-6">
+                <BiCodeAlt size={32} className="min-w-[40px]"/>
+                <p className="font-jetbrainsmono text-xl ml-6">
                   Frontend Development
                 </p>
               </div>
@@ -30,8 +30,8 @@ function MainSection2() {
             </FadeSection>
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1200}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <BiServer size={40} className="min-w-[40px]"/>
-                <p className="font-jetbrainsmono text-2xl ml-6">
+                <BiServer size={30} className="min-w-[40px]"/>
+                <p className="font-jetbrainsmono text-xl ml-6">
                   Backend Development
                 </p>
               </div>
@@ -39,8 +39,8 @@ function MainSection2() {
             </FadeSection>
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <BiMobileAlt size={40} className="min-w-[40px]"/>
-                <p className="font-jetbrainsmono text-2xl ml-6">
+                <BiMobileAlt size={30} className="min-w-[40px]"/>
+                <p className="font-jetbrainsmono text-xl ml-6">
                   Mobile App Development (Android)
                 </p>
               </div>
@@ -48,8 +48,8 @@ function MainSection2() {
             </FadeSection>
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={800}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <FaFileAlt size={40} className="min-w-[40px]"/>
-                <p className="font-jetbrainsmono text-2xl ml-6">
+                <FaFileAlt size={25} className="min-w-[40px]"/>
+                <p className="font-jetbrainsmono text-xl ml-6">
                   Advanced Microsoft Office User
                 </p>
               </div>
@@ -60,8 +60,10 @@ function MainSection2() {
           <div className="w-[50px]"/>
 
           <div className="flex flex-col items-start w-[60%] min-w-[400px]">
-            <FadeSection durationMs={2000} from="translate-y-[50px]" to="translate-y-0">
-              <h1 className="text-7xl font-jetbrainsmono text-center">About Me</h1>
+            <FadeSection durationMs={1500} from="translate-y-[50px]" to="translate-y-0">
+              <span className="font-jetbrainsmono text-8xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
+                About Me
+              </span>
             </FadeSection>
             <div className="flex flex-col">
               <div className="flex flex-row">
@@ -73,15 +75,18 @@ function MainSection2() {
                 </FadeSection>
               </div>
               <div className="grid grid-cols-2">
-                <div className="flex flex-col items-center justify-center">
-                  <TfiLocationPin size={75}/>
-                  <p className="font-jetbrainsmono text-lg mt-4">Central Java, Indonesia</p>
-                </div>
-                
-                <div className="flex flex-col items-center justify-center">
-                  <FaUserTie size={75}/>
-                  <p className="font-jetbrainsmono text-lg mt-4">Available For Work</p>
-                </div>
+                <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                  <div className="flex flex-col items-center justify-center">
+                    <TfiLocationPin size={70}/>
+                    <p className="font-jetbrainsmono text-lg mt-4 text-center">Central Java, Indonesia</p>
+                  </div>
+                </FadeSection>
+                <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                  <div className="flex flex-col items-center justify-center">
+                    <FaUserTie size={70}/>
+                    <p className="font-jetbrainsmono text-lg mt-4 text-center">Available For Work</p>
+                  </div>
+                </FadeSection>
               </div>
                {/* <ul className="font-jetbrainsmono">
               <li className="flex flex-row items-center justify-start mb-4">

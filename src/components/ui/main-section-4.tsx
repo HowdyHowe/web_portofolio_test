@@ -65,9 +65,9 @@ function MainSection4() {
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
 
-        <div className="flex flex-row items-center justify-center relative w-full h-full snap-start overflow-hidden">
+        <div className="flex flex-row items-center justify-center relative w-[80%] h-[80%] snap-start overflow-hidden">
           <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
-          <div className="flex flex-col items-center justify-around w-[80px] h-[60%] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
+          <div className="flex flex-col items-center justify-around w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
               <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
               >
@@ -113,24 +113,24 @@ function MainSection4() {
             </FadeSection>
           </div>
 
-          <div className="flex flex-col items-center justify-center h-[60%] w-[55%] overflow-hidden">
-            <div className="flex flex-row items-center justify-evenly h-[100%] w-[100%]">
+          <div className="flex flex-col items-start justify-center overflow-hidden">
+            <div className="flex flex-row items-center justify-start">
               <div className="flex flex-col justify-center w-[50%] h-[400px] rounded-xl m-5 py-2 ">
                 <AnimatePresence mode="wait">
                   <motion.div
                   key={`${lang}-${index}`}
-                  initial={{ opacity: 0, x: 50 }}
+                  initial={{ opacity: 0, x: 25 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 50 }}
+                  exit={{ opacity: 0, x: 25 }}
                   transition={{ duration: 0.3 }}
                   >
-                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1500}>
+                    <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1200}>
                       <div className="grid grid-rows-3 w-full h-[400px]">
                         <div className="flex items-start justify-start">
                           <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p>
                         </div>
                         <div className="flex items-start justify-start row-span-2">
-                          <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1700}>
+                          <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1500}>
                             <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[10px] mr-2"/>
                           </FadeSection>
                           <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks </p>
@@ -148,13 +148,13 @@ function MainSection4() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${lang}-${index}`}
-                  initial={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0, x: -25 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{opacity: 0, x: -50 }}
+                  exit={{opacity: 0, x: -25 }}
                   transition={{ duration: 0.5 }}
                 >
-                <div className="flex grid-cols-3 items-center justify-center w-[400px] h-[400px] border border-[#872341] rounded-xl m-5 duration-300">
-                  <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1800}>
+                <div className="flex grid-cols-3 items-center justify-center w-[400px] h-[400px] border border-[#872341] bg-[#F05941] rounded-xl mx-3 duration-300">
+                  <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1200}>
                       <p>{curLang[index].title}</p>
                       <p>{curLang[index].content}</p>
                   </FadeSection>
