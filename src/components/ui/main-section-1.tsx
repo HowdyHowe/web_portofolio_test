@@ -20,18 +20,26 @@ function MainSection1() {
         <div className="flex flex-col items-start justify-between w-[50%] min-w-[500px] m-6">
           <div>
             <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1300}>
-              <p className="font-bold text-8xl">
+              <p className="font-bold text-6xl">
                 Hello
               </p>
             </FadeSection>
             <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1500}>
-              <span className="font-jetbrainsmono text-6xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
-                I'm Toba Amiruddin Sitorus
+              <span className="font-jetbrainsmono text-8xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
+                I'm Toba
               </span>
             </FadeSection>
+            <div className="flex flex-row items-center">
+              <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1700}>
+                <div className="w-[125px] h-[5px] bg-[#872341]  rounded-2xl mr-2"/>
+              </FadeSection>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={2000}>
+                <p className="font-jetbrainsmono text-4xl my-8">Software Engineer</p>
+              </FadeSection>
+            </div>
             <div className="flex flex-row">
               <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1700}>
-                <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[7px] mr-2"/>
+                <div className="w-[50px] h-[5px] bg-[#F05941] rounded-2xl mt-[7px] mr-2"/>
               </FadeSection>
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={2000}>
                 <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm mb-[30px]" />
@@ -49,22 +57,22 @@ function MainSection1() {
             <ul className="flex flex-row items-center mt-[30px] gap-[75px]">
               <li>
                 <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                  <LiaGithub size={41}/>
+                  <LiaGithub size={46}/>
                 </TooltipWidget>
               </li>
               <li>
                 <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
-                  <LiaInstagram size={42}/>
+                  <LiaInstagram size={47}/>
                 </TooltipWidget>
               </li>
               <li>
                 <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
-                  <AiOutlineX size={32}/>
+                  <AiOutlineX size={37}/>
                 </TooltipWidget>
               </li>
               <li>
                 <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
-                  <LiaLinkedin size={40}/>
+                  <LiaLinkedin size={45}/>
                 </TooltipWidget>
               </li>
             </ul>
@@ -75,43 +83,8 @@ function MainSection1() {
         <div className="w-[75px]"/>
 
         <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-          <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="w-[450px] max-w-[200] border-2 border-[#F05941] rounded-full p-5 m-5"/>
+          <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
         </FadeSection>
-      </div>
-
-      <div className="grid grid-cols-4 w-[80%] h-[125px] mt-5">
-        <div className="flex flex-col items-center justify-center border-r-4 border-[#872341]">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <p className="font-jetbrainsmono">Years of Experience</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
-            <p className="font-jetbrainsmono text-6xl">2+</p>
-          </FadeSection>
-        </div>
-        <div className="flex flex-col items-center justify-center border-r-4 border-[#872341]">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1300}>
-            <p className="font-jetbrainsmono">Projects</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1400}>
-            <p className="font-jetbrainsmono text-6xl">25</p>
-          </FadeSection>
-        </div>
-        <div className="flex flex-col items-center justify-center border-r-4 border-[#872341]">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1600}>
-            <p className="font-jetbrainsmono">Clients</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1600}>
-            <p className="font-jetbrainsmono text-6xl">14</p>
-          </FadeSection>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1900}>
-            <p className="font-jetbrainsmono">Language Mastered</p>
-          </FadeSection>
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1800}>
-            <p className="font-jetbrainsmono text-6xl">5</p>
-          </FadeSection>
-        </div>
       </div>
 
     </div>
