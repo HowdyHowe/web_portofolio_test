@@ -21,7 +21,7 @@ function MainSection2() {
           <div className="flex flex-col items-start justify-start w-[600px]">
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1400}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <BiCodeAlt size={32} className="min-w-[40px]"/>
+                <BiCodeAlt size={37} color="#BE3144" className="min-w-[40px]"/>
                 <p className="font-jetbrainsmono text-xl ml-6">
                   Frontend Development
                 </p>
@@ -30,7 +30,7 @@ function MainSection2() {
             </FadeSection>
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1200}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <BiServer size={30} className="min-w-[40px]"/>
+                <BiServer size={35} color="#BE3144" className="min-w-[40px]"/>
                 <p className="font-jetbrainsmono text-xl ml-6">
                   Backend Development
                 </p>
@@ -39,7 +39,7 @@ function MainSection2() {
             </FadeSection>
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <BiMobileAlt size={30} className="min-w-[40px]"/>
+                <BiMobileAlt size={35} color="#BE3144" className="min-w-[40px]"/>
                 <p className="font-jetbrainsmono text-xl ml-6">
                   Mobile App Development (Android)
                 </p>
@@ -48,7 +48,7 @@ function MainSection2() {
             </FadeSection>
             <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={800}>
               <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                <FaFileAlt size={25} className="min-w-[40px]"/>
+                <FaFileAlt size={30} color="#BE3144" className="min-w-[40px]"/>
                 <p className="font-jetbrainsmono text-xl ml-6">
                   Advanced Microsoft Office User
                 </p>
@@ -77,13 +77,13 @@ function MainSection2() {
               <div className="grid grid-cols-2">
                 <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
                   <div className="flex flex-col items-center justify-center">
-                    <TfiLocationPin size={70}/>
+                    <TfiLocationPin size={70} color="#BE3144"/>
                     <p className="font-jetbrainsmono text-lg mt-4 text-center">Central Java, Indonesia</p>
                   </div>
                 </FadeSection>
                 <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
                   <div className="flex flex-col items-center justify-center">
-                    <FaUserTie size={70}/>
+                    <FaUserTie size={70} color="#BE3144"/>
                     <p className="font-jetbrainsmono text-lg mt-4 text-center">Available For Work</p>
                   </div>
                 </FadeSection>
@@ -142,45 +142,45 @@ function MainSection2() {
         <div className="h-[50px]"/>
 
         <div className="grid grid-cols-4 w-[80%]">
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={400}>
-            <div className="flex flex-col items-center justify-center border-r-4 border-[#872341]">
+          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+            <div className="flex flex-col items-center justify-center py-3 border-l-4 border-[#F05931]">
               <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
                 <p className="font-jetbrainsmono">Years of Experience</p>
               </FadeSection>
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
                 <p className="font-jetbrainsmono text-6xl">2+</p>
               </FadeSection>
             </div>
           </FadeSection>
 
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={600}>
-            <div className="flex flex-col items-center justify-center border-r-4 border-[#872341] ">
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1300}>
+          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+            <div className="flex flex-col items-center justify-center py-3 border-l-4 border-[#F05931]">
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
                 <p className="font-jetbrainsmono">Projects</p>
               </FadeSection>
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1400}>
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
                 <p className="font-jetbrainsmono text-6xl">25</p>
               </FadeSection>
             </div>
           </FadeSection>
 
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={800}>
-            <div className="flex flex-col items-center justify-center border-r-4 border-[#872341]">
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1600}>
+          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+            <div className="flex flex-col items-center justify-center py-3 border-l-4 border-[#F05931]">
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
                 <p className="font-jetbrainsmono">Clients</p>
               </FadeSection>
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1600}>
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
                 <p className="font-jetbrainsmono text-6xl">14</p>
               </FadeSection>
             </div>
           </FadeSection>
 
-          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <div className="flex flex-col items-center justify-center">
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1900}>
+          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+            <div className="flex flex-col items-center justify-center py-3 border-x-4 border-[#F05931]">
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
                 <p className="font-jetbrainsmono">Language Mastered</p>
               </FadeSection>
-              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1800}>
+              <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
                 <p className="font-jetbrainsmono text-6xl">5</p>
               </FadeSection>
             </div>

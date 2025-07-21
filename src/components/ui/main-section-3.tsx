@@ -122,9 +122,9 @@ function CertificationsCard() {
                 {
                     certificationsList.map(({organizer, event, year}) => (
                             <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
-                                <p className="text-sm">{organizer}</p>
+                                <p className="text-sm text-[#F05941]">{organizer}</p>
                                 <p className="text-xl">{event}</p>
-                                <p className="text-xs">• {year}</p>
+                                <p className="text-xs opacity-75">• {year}</p>
                             </div>
                     ))
                 }
@@ -147,7 +147,7 @@ function MainSection3() {
         <div className="flex flex-row items-center justify-center w-full h-screen relative snap-start scroll-smooth overflow-hidden">
             <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
 
-            <div className="flex flex-col w-[20%] items-start justify-center">
+            <div className="flex flex-col w-[400px] items-start justify-center">
                 <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1300}>
                     <TooltipWidget scale={false} tooltipText="Educations" duration="duration-500" onClick={() => changeInfo("Educations")}>
                         <div className={`flex items-center justify-center h-[50px] my-2 bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500 ${curInfo == "Educations" ? "w-[300px]" : "w-[100px]"}`}>
@@ -182,7 +182,7 @@ function MainSection3() {
                 </FadeSection>
             </div>
 
-            <div className="flex flex-col w-[35%] h-[600px] items-start justify-between">
+            <div className="flex flex-col w-[50%] h-[600px] max-w-[600px] items-start justify-between">
                 <AnimatePresence mode="wait">
                     <motion.div key={curInfo} initial={{opacity:0, x:50}} animate={{opacity:1, x:0}} exit={{opacity:0, x:50}} transition={{duration:0.4}}>
                         <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1300}>

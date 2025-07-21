@@ -65,14 +65,16 @@ function MainSection4() {
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
 
-        <div className="flex flex-row items-center justify-center relative w-[80%] h-[80%] snap-start overflow-hidden">
+
+        <div className="flex flex-row items-center justify-center relative w-[80%] h-[70%] snap-start overflow-hidden">
           <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
+
           <div className="flex flex-col items-center justify-around w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
               <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "dart" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <FaDartLang size={32} className={lang == "dart" ? "fill-[#872341] duration-500" : ""}/>
+                  <FaDartLang size={32} className={lang == "dart" ? "fill-[#BE3144] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
@@ -83,7 +85,7 @@ function MainSection4() {
                 }}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "kotlin" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiKotlin size={30} className={lang == "kotlin" ? "fill-[#872341] duration-500" : ""}/>
+                  <SiKotlin size={30} className={lang == "kotlin" ? "fill-[#BE3144] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
@@ -91,7 +93,7 @@ function MainSection4() {
               <TooltipWidget scale={true} tooltipText="PHP" duration="duration-700" onClick={() => changeLang("php")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "php" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiPhp size={42} className={lang == "php" ? "fill-[#872341] duration-500" : ""}/>
+                  <SiPhp size={42} className={lang == "php" ? "fill-[#BE3144] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
@@ -99,7 +101,7 @@ function MainSection4() {
               <TooltipWidget scale={true} tooltipText="Javascript" duration="duration-700" onClick={() => changeLang("javascript")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "javascript" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiJavascript size={38} className={lang == "javascript" ? "fill-[#872341] duration-500" : ""}/>
+                  <SiJavascript size={38} className={lang == "javascript" ? "fill-[#BE3144] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
@@ -107,15 +109,15 @@ function MainSection4() {
               <TooltipWidget scale={true} tooltipText="Python" duration="duration-700" onClick={() => changeLang("python")}
               >
                 <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "border-2 bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <FaPython size={40} className={lang == "python" ? "fill-[#872341] duration-500" : ""}/>
+                  <FaPython size={40} className={lang == "python" ? "fill-[#BE3144] duration-500" : ""}/>
                 </div>
               </TooltipWidget>
             </FadeSection>
           </div>
 
-          <div className="flex flex-col items-start justify-center overflow-hidden">
-            <div className="flex flex-row items-center justify-start">
-              <div className="flex flex-col justify-center w-[50%] h-[400px] rounded-xl m-5 py-2 ">
+          <div className="flex flex-col items-start justify-center rounded-e-3xl overflow-hidden">
+            <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-col justify-center w-[50%] h-[447px] rounded-xl m-5 py-2 ">
                 <AnimatePresence mode="wait">
                   <motion.div
                   key={`${lang}-${index}`}
@@ -127,10 +129,13 @@ function MainSection4() {
                     <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1200}>
                       <div className="grid grid-rows-3 w-full h-[400px]">
                         <div className="flex items-start justify-start">
-                          <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p>
+                          {/* <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p> */}
+                          <span className="font-jetbrainsmono text-6xl font-bold bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
+                            {index + 1 }. {lang}
+                          </span>
                         </div>
                         <div className="flex items-start justify-start row-span-2">
-                          <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1500}>
+                          <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1200}>
                             <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[10px] mr-2"/>
                           </FadeSection>
                           <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks </p>
@@ -153,17 +158,17 @@ function MainSection4() {
                   exit={{opacity: 0, x: -25 }}
                   transition={{ duration: 0.5 }}
                 >
-                <div className="flex grid-cols-3 items-center justify-center w-[400px] h-[400px] border border-[#872341] bg-[#F05941] rounded-xl mx-3 duration-300">
-                  <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1200}>
-                      <p>{curLang[index].title}</p>
-                      <p>{curLang[index].content}</p>
-                  </FadeSection>
-                </div>
+                <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={700}>
+                  <div className="flex items-center justify-center w-[400px] h-[400px] bg-[#F05941] rounded-xl mx-3 duration-300">
+                        <p>{curLang[index].title}</p>
+                        <p>{curLang[index].content}</p>
+                  </div>
+                </FadeSection>
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            <div className="flex flex-row w-full h-[60px] items-center px-6 py-2">
+            <div className="flex flex-row w-full h-[60px] items-center mx-[5%] py-2">
 
               <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={2200}>
                 <TooltipWidget scale={true} tooltipText="Previous" duration="duration-700" onClick={prev}>
