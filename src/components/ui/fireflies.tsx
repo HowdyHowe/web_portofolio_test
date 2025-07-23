@@ -11,7 +11,7 @@ const Fireflies: React.FC<FirefliesProps> = ({ count = 25, color }) => {
       return {
         top: Math.random() * 100,
         left: Math.random() * 100,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 3 + 1,
         delay: Math.random() * 5,
         duration: 3 + Math.random() * 4,
       };

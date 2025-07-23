@@ -27,7 +27,7 @@ function Navbar() {
 
     return (
         <header className="navbar">
-          <h1 className="flex items-center justify-center text-xl">TOBA|CTH</h1>
+          <h1 className="flex items-center justify-center text-xl">TOBA</h1>
           <ul className="navbar-content">
             <li className="navbar-content-item">Home</li>
             <li className="navbar-content-item">About me</li>

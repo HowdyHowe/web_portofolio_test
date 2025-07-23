@@ -11,29 +11,20 @@ function MainSection5() {
 
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
 
-        <div className="flex items-center justify-center w-[500px] h-[500px] bg-[#d1d1d1] rounded-xl z-10">
-          contoh
-        </div>
-
-        <div className="flex items-center justify-center w-[500px] h-[500px] border-2 rounded-xl z-10">
-          <ul className="font-jetbrainsmono">
-              <li className="flex flex-row items-center justify-start mb-4">
-                <pre className="text-xl">Name         : </pre>
-                <p className="text-lg">Toba Amiruddin Sitorus</p>
-              </li>
-              <li className="flex flex-row items-center justify-start mb-4">
-                <pre className="text-xl">Location     : </pre>
-                <p className="text-lg">Special Region of Yogyakarta, Indonesia</p>
-              </li>
-              <li className="flex flex-row items-center justify-start mb-4">
-                <pre className="text-xl">Phone Number : </pre>
-                <p className="text-lg">+62 8123 4567 890</p>
-              </li>
-              <li className="flex flex-row items-center justify-start mb-4">
-                <pre className="text-xl">Email        : </pre>
-                <p className="text-lg">amir@gmail.com</p>
-              </li>
-            </ul>
+        <div className="flex flex-col items-center justify-center w-[800px] h-[600px] rounded-xl z-10">
+          <p className="font-jetbrainsmono text-4xl mb-10">Send Me a Massage</p>
+          <div className="flex flex-col items-center w-full justify-center">
+            <div className="flex flex-row w-[90%] items-center justify-center">
+              <div className="flex items-center w-[50%] h-[50px] mr-5  bg-[#2c2c2c] p-5 my-2 border border-[#872341] rounded-lg">First Name</div>
+              <div className="flex items-center w-[50%] h-[50px] bg-[#2c2c2c] p-5 my-2 border border-[#872341] rounded-lg">Last Name</div>
+            </div>
+            <div className="flex items-center w-[90%] h-[50px]  bg-[#2c2c2c] p-5 my-2 border border-[#872341] rounded-lg">Email Address</div>
+            <div className="flex items-center w-[90%] h-[50px]  bg-[#2c2c2c] p-5 my-2 border border-[#872341] rounded-lg">Phone Number</div>
+            <div className="flex items-center w-[90%] h-[300px]  bg-[#2c2c2c] p-5 my-2 border border-[#872341] rounded-lg">Message</div>
+          </div>
+          <div className="mt-10">
+            <p className="flex items-center justify-center font-jetbrainsmono text-base w-[150px] h-[50px] bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05741] duration-500">Send</p>
+          </div>
         </div>
 
 {/* =========================================================== */}

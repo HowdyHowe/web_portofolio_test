@@ -2,9 +2,9 @@ import { LiaDownloadSolid, LiaGithub, LiaInstagram, LiaLinkedin } from "react-ic
 import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
-import { AiOutlineX } from "react-icons/ai";
-import TooltipWidget from "./tooltip";
 import TextLoader from "../hooks/text-hook";
+import TooltipWidget from "./tooltip";
+import { AiOutlineX } from "react-icons/ai";
 
 function MainSection1() {
   const {isDark} = useTheme();
@@ -12,15 +12,15 @@ function MainSection1() {
   return (
     <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden">
 
-      <div className="flex flex-row-reverse items-center justify-center mt-[2%]">
-        <div className="absolute inset-0 bg-cover bg-center z-0 opacity-0 animate-fadeIn"
-            style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
+      <div className="absolute inset-0 bg-cover bg-center z-10 "
+          style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
+      <div className="flex flex-row-reverse items-center justify-center z-20 mt-[2%]">
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
-        <div className="flex flex-col items-start justify-between w-[50%] min-w-[500px] m-6">
+        <div className="flex flex-col items-start justify-between w-[35%] min-w-[550px] m-6">
           <div>
             <FadeSection from={"translate-x-[80px]"} to={"translate-y-0"} durationMs={1300}>
-              <p className="font-bold text-6xl">
+              <p className="font-jetbrainsmono font-bold text-7xl">
                 Hello
               </p>
             </FadeSection>
@@ -53,26 +53,66 @@ function MainSection1() {
 
           </div>
 
+          {/* <div className="grid grid-cols-3 w-[40%] min-w-[600px] mt-[30px]">
+            <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono font-bold text-7xl text-[#BE3144]">2+</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
+                  <p className="font-jetbrainsmono font-bold">Years of Experience</p>
+                </FadeSection>
+              </div>
+            </FadeSection>
+
+            <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono font-bold text-7xl text-[#BE3144]">25</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
+                  <p className="font-jetbrainsmono font-bold">Projects</p>
+                </FadeSection>
+              </div>
+            </FadeSection>
+
+            <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
+              <div className="flex flex-col items-center justify-center">
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+                  <p className="font-jetbrainsmono font-bold text-7xl text-[#BE3144]">14</p>
+                </FadeSection>
+                <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
+                  <p className="font-jetbrainsmono font-bold">Clients</p>
+                </FadeSection>
+              </div>
+            </FadeSection>
+          </div> */}
+
           <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
-            <ul className="flex flex-row items-center mt-[30px] gap-[75px]">
+            <ul className="flex flex-row items-center justify-center mt-[30px] gap-[50px]">
               <li>
                 <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                  <LiaGithub size={46}/>
+                  <p className="font-jetbrainsmono text-lg mb-2">Find Me On</p>
+                </TooltipWidget>
+              </li>
+              <li>
+                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
+                  <LiaGithub size={40} className="rounded-lg"/>
                 </TooltipWidget>
               </li>
               <li>
                 <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
-                  <LiaInstagram size={47}/>
+                  <LiaInstagram size={42} className="rounded-lg"/>
                 </TooltipWidget>
               </li>
               <li>
                 <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
-                  <AiOutlineX size={37}/>
+                  <AiOutlineX size={40} className="rounded-lg p-1"/>
                 </TooltipWidget>
               </li>
               <li>
                 <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
-                  <LiaLinkedin size={45}/>
+                  <LiaLinkedin size={41} className="rounded-lg"/>
                 </TooltipWidget>
               </li>
             </ul>
@@ -80,11 +120,17 @@ function MainSection1() {
         </div>
 
         {/* blocksized for space */}
-        <div className="w-[75px]"/>
+        <div className="w-[25px]"/>
 
-        <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-          <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
-        </FadeSection>
+        <div>
+
+        <div className="z-50">
+          <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
+            <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
+          </FadeSection>
+        </div>
+        </div>
+
       </div>
 
     </div>

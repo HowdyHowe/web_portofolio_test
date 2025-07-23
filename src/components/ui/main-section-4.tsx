@@ -63,13 +63,13 @@ function MainSection4() {
   }
 
     return (
-      <div className="flex flex-col items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
+      <div className="flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
 
 
-        <div className="flex flex-row items-center justify-center relative w-[80%] h-[70%] snap-start overflow-hidden">
-          <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
+        <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
+        <div className="flex flex-row items-center justify-center relative w-[90%] h-[70%] snap-start overflow-hidden">
 
-          <div className="flex flex-col items-center justify-around w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
+          <div className="flex flex-col items-center justify-evenly w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
             <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
               <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
               >
@@ -117,7 +117,7 @@ function MainSection4() {
 
           <div className="flex flex-col items-start justify-center rounded-e-3xl overflow-hidden">
             <div className="flex flex-row items-center justify-center">
-              <div className="flex flex-col justify-center w-[50%] h-[447px] rounded-xl m-5 py-2 ">
+              <div className="flex flex-col justify-center w-[55%] h-[447px] rounded-xl m-5 py-2 ">
                 <AnimatePresence mode="wait">
                   <motion.div
                   key={`${lang}-${index}`}
@@ -159,7 +159,7 @@ function MainSection4() {
                   transition={{ duration: 0.5 }}
                 >
                 <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={700}>
-                  <div className="flex items-center justify-center w-[400px] h-[400px] bg-[#F05941] rounded-xl mx-3 duration-300">
+                  <div className="flex items-center justify-center w-[400px] h-[450px] bg-[#F05941] rounded-xl mx-3 duration-300">
                         <p>{curLang[index].title}</p>
                         <p>{curLang[index].content}</p>
                   </div>
