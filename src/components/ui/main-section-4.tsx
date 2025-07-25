@@ -131,7 +131,7 @@ function MainSection4() {
                         <div className="flex items-start justify-start">
                           {/* <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p> */}
                           <span className="font-jetbrainsmono text-6xl font-bold bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
-                            {index + 1 }. {lang}
+                            {lang}
                           </span>
                         </div>
                         <div className="flex items-start justify-start row-span-2">
@@ -159,7 +159,7 @@ function MainSection4() {
                   transition={{ duration: 0.5 }}
                 >
                 <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={700}>
-                  <div className="flex items-center justify-center w-[400px] h-[450px] bg-[#F05941] rounded-xl mx-3 duration-300">
+                  <div className="flex items-center justify-center w-[450px] h-[450px] bg-[#F05941] rounded-xl mx-3 duration-300">
                         <p>{curLang[index].title}</p>
                         <p>{curLang[index].content}</p>
                   </div>
@@ -170,17 +170,17 @@ function MainSection4() {
 
             <div className="flex flex-row w-full h-[60px] items-center mx-[5%] py-2">
 
-              <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={2200}>
+              <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={1500}>
                 <TooltipWidget scale={true} tooltipText="Previous" duration="duration-700" onClick={prev}>
                   <RxTriangleLeft size={50} className="mr-2 border border-[#d1d1d1] rounded-xl"/>
                 </TooltipWidget>
               </FadeSection>
 
-              <FadeSection from="translate-y-[30px]" to="translate-y-0" durationMs={1800}>
+              <FadeSection from="translate-y-[30px]" to="translate-y-0" durationMs={1000}>
                 <p className="flex items-center justify-center pb-2 font-jetbrainsmono text-xl duration-300">{index + 1} / {curLang.length}</p>
               </FadeSection>
 
-              <FadeSection from="translate-x-[-30px]" to="translate-y-0" durationMs={2200}>
+              <FadeSection from="translate-x-[-30px]" to="translate-y-0" durationMs={1500}>
                 <TooltipWidget scale={true} tooltipText="Next" duration="duration-700" onClick={next}>
                   <RxTriangleRight size={50} className="ml-2 border border-[#d1d1d1] rounded-xl"/>
                 </TooltipWidget>

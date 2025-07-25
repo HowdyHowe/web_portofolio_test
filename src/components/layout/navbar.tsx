@@ -5,8 +5,26 @@ import { LiaGithub, LiaInstagram, LiaLinkedin } from 'react-icons/lia';
 import { useTheme } from '../hooks/theme-hook';
 import TooltipWidget from '../ui/tooltip';
 
-function Navbar() {
+// function detectVisibleSection(callback:(id: string) => void) {
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           const currentId = entry.target.id;
+//           callback(currentId); // This is where you get the visible ID
+//         }
+//       });
+//     },
+//     { threshold: 0.6 } // Only trigger when 60% of section is visible
+//   );
+
+//   const sections = document.querySelectorAll("section[id]");
+//   sections.forEach((section) => observer.observe(section));
+// }
+
+function Navbar({active} : {active:string}) {
     const [isNavbar, setIsNavbar] = useState(true);
+    // const [activeId, setActiveId] = useState<string>("Home");
     const {isDark, setIsDark } = useTheme();
 
     const handleNavbar = () => {
@@ -17,6 +35,12 @@ function Navbar() {
       setIsNavbar(true);
     }
 
+    // useEffect(() => {
+    //   detectVisibleSection((id) => {
+    //     setActiveId(id); // example state for navbar
+    //   });
+    // }, []);
+
     useEffect(() => {
       window.addEventListener('resize', handleSizeChange);
 
@@ -26,11 +50,12 @@ function Navbar() {
     }, [])
 
     return (
-        <header className="navbar">
+      <header className='fixed flex items-center justify-center w-full h-[80px] bg-black z-30'>
+        <div className="navbar">
           <h1 className="flex items-center justify-center text-xl">TOBA</h1>
           <ul className="navbar-content">
-            <li className="navbar-content-item">Home</li>
-            <li className="navbar-content-item">About me</li>
+            <li className={`${active == "home" ? "navbar-content-item-active" : "navbar-content-item"} transition-all duration-300`}><a>Home</a></li>
+            <li className={`${active == "aboutme" ? "navbar-content-item-active" : "navbar-content-item"} transition-all duration-300`}>About me</li>
             <li className="navbar-content-item">Resume</li>
             <li className="navbar-content-item">Projects</li>
             <li className="navbar-content-item">Contact</li>
@@ -85,7 +110,8 @@ function Navbar() {
               </li>
             </ul>
           </div>
-        </header>
+        </div>
+      </header>
 
     )
 }

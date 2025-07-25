@@ -1,15 +1,19 @@
 // navbar website
 .navbar{
-    @apply fixed flex flex-row items-center justify-between w-full h-[40px] px-5 z-30;
+    @apply fixed grid grid-cols-4 w-[80%] h-[70px] bg-[#0e0e0e] rounded-full mt-1 z-30;
 
     // menu navbar
     .navbar-content{
-        @apply hidden lg:flex list-none;
+        @apply hidden col-span-2 lg:flex justify-center list-none;
     }
 
     // item dari navbar
     .navbar-content-item{
         @apply flex flex-row items-center justify-center w-[100px] text-base;
+    }
+
+    .navbar-content-item-active{
+        @apply flex flex-row items-center justify-center w-[100px] text-lg;
     }
 
     // dropdown website

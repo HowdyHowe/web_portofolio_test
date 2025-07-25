@@ -10,10 +10,10 @@ function MainSection1() {
   const {isDark} = useTheme();
 
   return (
-    <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden">
+    <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="home">
 
-      <div className="absolute inset-0 bg-cover bg-center z-10 "
-          style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/>
+      {/* <div className="absolute inset-0 bg-cover bg-center z-10 "
+          style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/> */}
       <div className="flex flex-row-reverse items-center justify-center z-20 mt-[2%]">
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
 
@@ -53,7 +53,37 @@ function MainSection1() {
 
           </div>
 
-          {/* <div className="grid grid-cols-3 w-[40%] min-w-[600px] mt-[30px]">
+          <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
+            <ul className="flex flex-row items-center justify-center mt-[30px] gap-[50px]">
+              {/* <li>
+                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
+                  <p className="font-jetbrainsmono text-lg mb-2">Find Me On</p>
+                </TooltipWidget>
+              </li> */}
+              <li>
+                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
+                  <LiaGithub size={40} className="rounded-lg"/>
+                </TooltipWidget>
+              </li>
+              <li>
+                <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
+                  <LiaInstagram size={42} className="rounded-lg"/>
+                </TooltipWidget>
+              </li>
+              <li>
+                <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
+                  <AiOutlineX size={40} className="rounded-lg p-1"/>
+                </TooltipWidget>
+              </li>
+              <li>
+                <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
+                  <LiaLinkedin size={41} className="rounded-lg"/>
+                </TooltipWidget>
+              </li>
+            </ul>
+          </FadeSection>
+
+          <div className="grid grid-cols-3 w-[40%] min-w-[600px] mt-[30px]">
             <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
               <div className="flex flex-col items-center justify-center">
                 <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
@@ -86,37 +116,7 @@ function MainSection1() {
                 </FadeSection>
               </div>
             </FadeSection>
-          </div> */}
-
-          <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
-            <ul className="flex flex-row items-center justify-center mt-[30px] gap-[50px]">
-              <li>
-                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                  <p className="font-jetbrainsmono text-lg mb-2">Find Me On</p>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                  <LiaGithub size={40} className="rounded-lg"/>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
-                  <LiaInstagram size={42} className="rounded-lg"/>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
-                  <AiOutlineX size={40} className="rounded-lg p-1"/>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
-                  <LiaLinkedin size={41} className="rounded-lg"/>
-                </TooltipWidget>
-              </li>
-            </ul>
-          </FadeSection>
+          </div>
         </div>
 
         {/* blocksized for space */}
@@ -124,7 +124,7 @@ function MainSection1() {
 
         <div>
 
-        <div className="z-50">
+        <div className="z-10">
           <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
             <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
           </FadeSection>
