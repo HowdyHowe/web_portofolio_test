@@ -62,46 +62,17 @@ function MainSection2() {
 
 
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
-        <div className="flex flex-row items-center justify-center w-[90%] h-[90%]">
-          <div className="z-20 min-w-[300px]">
-            <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-              <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl"/>
+        <div className="flex flex-col items-center justify-center w-[90%] h-full pt-[100px]">
+          <div className="z-20 w-[300px] min-w-[200px] ">
+            <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
+              <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="rounded-full"/>
             </FadeSection>
           </div>
+          <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
+            <div className="mb-[30px] font-jetbrainsmono text-3xl">I'm Toba Amiruddin Sitorus</div>
+          </FadeSection>
 
-          <div className="w-[50px]"/>
-
-          <div className="flex flex-col-reverse items-center justify-center">
-            <div className="flex flex-col items-start justify-start w-[420px]">
-              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1400}>
-                <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                  <BiCodeAlt size={37} color="#BE3144" className="min-w-[40px]"/>
-                  <p className="font-jetbrainsmono text-xl ml-6">
-                    Frontend Development
-                  </p>
-                </div>
-                <pre>◌</pre>
-              </FadeSection>
-              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1200}>
-                <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                  <BiServer size={35} color="#BE3144" className="min-w-[40px]"/>
-                  <p className="font-jetbrainsmono text-xl ml-6">
-                    Backend Development
-                  </p>
-                </div>
-                <pre>◌</pre>
-              </FadeSection>
-              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
-                <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                  <BiMobileAlt size={35} color="#BE3144" className="min-w-[40px]"/>
-                  <p className="font-jetbrainsmono text-xl ml-6">
-                    Android App Development
-                  </p>
-                </div>
-                <pre>◌</pre>
-              </FadeSection>
-            </div>
-
+          <div className="flex flex-row-reverse items-center justify-center">
             <div className="flex flex-col items-start w-[500px] min-w-[500px] mb-[25px]">
               <FadeSection durationMs={1200} from="translate-y-[50px]" to="translate-y-0">
                 <span className="font-jetbrainsmono text-8xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
@@ -132,6 +103,37 @@ function MainSection2() {
                   </FadeSection>
                 </div>
               </div>
+            </div>
+
+
+            <div className="flex flex-col items-start justify-start w-[500px]">
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1400}>
+                <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
+                  <BiCodeAlt size={37} color="#BE3144" className="min-w-[40px]"/>
+                  <p className="font-jetbrainsmono text-xl ml-6">
+                    Frontend Development
+                  </p>
+                </div>
+                <pre>◌</pre>
+              </FadeSection>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1200}>
+                <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
+                  <BiServer size={35} color="#BE3144" className="min-w-[40px]"/>
+                  <p className="font-jetbrainsmono text-xl ml-6">
+                    Backend Development
+                  </p>
+                </div>
+                <pre>◌</pre>
+              </FadeSection>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
+                  <BiMobileAlt size={35} color="#BE3144" className="min-w-[40px]"/>
+                  <p className="font-jetbrainsmono text-xl ml-6">
+                    Android App Development
+                  </p>
+                </div>
+                <pre>◌</pre>
+              </FadeSection>
             </div>
           </div>
         </div>

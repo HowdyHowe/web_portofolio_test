@@ -51,14 +51,14 @@ function Navbar({active} : {active:string}) {
 
     return (
       <header className='fixed flex items-center justify-center w-full h-[80px] bg-black z-30'>
-        <div className="navbar">
+        <div className={`${active == "home" ? "navbar" : "navbar-out"} animate-fadeIn transition-all duration-700`}>
           <h1 className="flex items-center justify-center text-xl">TOBA</h1>
           <ul className="navbar-content">
-            <li className={`${active == "home" ? "navbar-content-item-active" : "navbar-content-item"} transition-all duration-300`}><a>Home</a></li>
-            <li className={`${active == "aboutme" ? "navbar-content-item-active" : "navbar-content-item"} transition-all duration-300`}>About me</li>
-            <li className="navbar-content-item">Resume</li>
-            <li className="navbar-content-item">Projects</li>
-            <li className="navbar-content-item">Contact</li>
+            <a href="#home" className={`${active == "home" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Home</a>
+            <a href="#aboutme" className={`${active == "aboutme" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>About Me</a>
+            <a href="#resume" className={`${active == "resume" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Resume</a>
+            <a href="#project" className={`${active == "project" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Projects</a>
+            <a href="#contact" className={`${active == "contact" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Contact</a>
           </ul>
 
           <div className="flex items-center justify-center">

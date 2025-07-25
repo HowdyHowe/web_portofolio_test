@@ -11,10 +11,10 @@ function MainSection5() {
   const {isDark} = useTheme();
 
     return (
-      <div className="flex flex-row items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden">
+      <div className="flex flex-row items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden" id="contact">
 
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
-        <FadeSection from="translate-y-0" to="translate-y-0" durationMs={2000}>
+        <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1000}>
           <form action="" method="post" className="flex flex-col items-center justify-center w-[700px] h-[700px] max-h-[75%] rounded-3xl  bg-[#0e0e0e]">
             <p className="font-jetbrainsmono text-2xl mb-1">Connect With Me</p>
             <span className="font-jetbrainsmono text-6xl font-bold bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
@@ -62,6 +62,31 @@ function MainSection5() {
           </form>
         </FadeSection>
 
+        <div className="w-[50px]"/>
+
+        {/* <div className="flex flex-col items-start justify-evenly w-[300px] h-[200px] font-jetbrainsmono text-lg">
+          <div className="flex flex-row items-center">
+            <MdEmail size={40} className="mr-4"/>
+            <div>
+              <p>
+                My Email Address
+              </p>
+              <p>amir@gmail.com</p>
+            </div>
+          </div>
+          <div className="flex flex-row items-center">
+            <MdPhone size={40} className="mr-4"/>
+            <div>
+              <p className="text-md">
+                My Phone Number
+              </p>
+              <p>
+                +628 123 4567 890
+              </p>
+            </div>
+          </div>
+        </div> */}
+
         {/* <div className="flex flex-col items-center justify-center w-[800px] h-[600px] rounded-xl z-10">
           <p className="font-jetbrainsmono text-4xl mb-10">Send Me a Massage</p>
           <div className="flex flex-col items-center w-full justify-center">
@@ -98,22 +123,21 @@ function MainSection5() {
 
         <div className="absolute grid grid-cols-2 bottom-0 w-[75%] mx-[50px] h-[75px] z-50">
           <div className="flex flex-col items-start justify-center">
-            {/* <p className="font-jetbrainsmono text-3xl font-bold">
-              TOBA
-            </p> */}
-            <div className="flex flex-row">
-              <BiCopyright size={25} className="mr-2"/>
-              <p className="font-jetbrainsmono text-base mt-[2px]">Toba Amiruddin Sitorus. All Right Reserved</p>
-            </div>
+            <FadeSection from={"translate-x-[-50px]"} to={"translte-y-0"} durationMs={1300}>
+              <div className="flex flex-row">
+                <BiCopyright size={25} className="mr-2"/>
+                <p className="font-jetbrainsmono text-base mt-[2px]">Toba Amiruddin Sitorus. All Right Reserved</p>
+              </div>
+            </FadeSection>
           </div>
           <div className="flex items-center justify-end ">
-            <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
+            <FadeSection from={"translate-x-[50px]"} to={"translte-y-0"} durationMs={1300}>
               <ul className="flex flex-row items-center justify-center gap-[50px]">
-                {/* <li>
+                <li>
                   <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                    <p className="font-jetbrainsmono text-lg mb-2">Find Me On</p>
+                    <p className="font-jetbrainsmono text-lg">Find Me On</p>
                   </TooltipWidget>
-                </li> */}
+                </li>
                 <li>
                   <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
                     <LiaGithub size={40} className="rounded-lg"/>

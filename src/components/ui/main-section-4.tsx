@@ -63,57 +63,58 @@ function MainSection4() {
   }
 
     return (
-      <div className="flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden">
-
+      <div className="flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="project">
 
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
         <div className="flex flex-row items-center justify-center relative w-[90%] h-[70%] snap-start overflow-hidden">
 
-          <div className="flex flex-col items-center justify-evenly w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
-              <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "dart" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <FaDartLang size={32} className={lang == "dart" ? "fill-[#BE3144] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1300}>
-              <TooltipWidget scale={true} tooltipText="Kotlin" duration="duration-700" onClick={() =>  {
-                  changeLang("kotlin")
-                  setIndex(0)
-                }}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "kotlin" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiKotlin size={30} className={lang == "kotlin" ? "fill-[#BE3144] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1600}>
-              <TooltipWidget scale={true} tooltipText="PHP" duration="duration-700" onClick={() => changeLang("php")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "php" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiPhp size={42} className={lang == "php" ? "fill-[#BE3144] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1900}>
-              <TooltipWidget scale={true} tooltipText="Javascript" duration="duration-700" onClick={() => changeLang("javascript")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "javascript" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <SiJavascript size={38} className={lang == "javascript" ? "fill-[#BE3144] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-            <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={2200}>
-              <TooltipWidget scale={true} tooltipText="Python" duration="duration-700" onClick={() => changeLang("python")}
-              >
-                <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "border-2 bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
-                  <FaPython size={40} className={lang == "python" ? "fill-[#BE3144] duration-500" : ""}/>
-                </div>
-              </TooltipWidget>
-            </FadeSection>
-          </div>
+          <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
+            <div className="flex flex-col items-center justify-evenly w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
+              <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
+                <TooltipWidget scale={true} tooltipText="Dart" duration="duration-700" onClick={() => changeLang("dart")}
+                >
+                  <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "dart" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
+                    <FaDartLang size={32} className={lang == "dart" ? "fill-[#BE3144] duration-500" : ""}/>
+                  </div>
+                </TooltipWidget>
+              </FadeSection>
+              <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1300}>
+                <TooltipWidget scale={true} tooltipText="Kotlin" duration="duration-700" onClick={() =>  {
+                    changeLang("kotlin")
+                    setIndex(0)
+                  }}
+                >
+                  <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "kotlin" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
+                    <SiKotlin size={30} className={lang == "kotlin" ? "fill-[#BE3144] duration-500" : ""}/>
+                  </div>
+                </TooltipWidget>
+              </FadeSection>
+              <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1600}>
+                <TooltipWidget scale={true} tooltipText="PHP" duration="duration-700" onClick={() => changeLang("php")}
+                >
+                  <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "php" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
+                    <SiPhp size={42} className={lang == "php" ? "fill-[#BE3144] duration-500" : ""}/>
+                  </div>
+                </TooltipWidget>
+              </FadeSection>
+              <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1900}>
+                <TooltipWidget scale={true} tooltipText="Javascript" duration="duration-700" onClick={() => changeLang("javascript")}
+                >
+                  <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "javascript" ? "bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
+                    <SiJavascript size={38} className={lang == "javascript" ? "fill-[#BE3144] duration-500" : ""}/>
+                  </div>
+                </TooltipWidget>
+              </FadeSection>
+              <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={2200}>
+                <TooltipWidget scale={true} tooltipText="Python" duration="duration-700" onClick={() => changeLang("python")}
+                >
+                  <div className={`flex flex-col items-center justify-center w-[60px] h-[60px] ${lang == "python" ? "border-2 bg-[#d1d1d1] rounded-xl duration-500" : ""}`}>
+                    <FaPython size={40} className={lang == "python" ? "fill-[#BE3144] duration-500" : ""}/>
+                  </div>
+                </TooltipWidget>
+              </FadeSection>
+            </div>
+          </FadeSection>
 
           <div className="flex flex-col items-start justify-center rounded-e-3xl overflow-hidden">
             <div className="flex flex-row items-center justify-center">
@@ -158,8 +159,8 @@ function MainSection4() {
                   exit={{opacity: 0, x: -25 }}
                   transition={{ duration: 0.5 }}
                 >
-                <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={700}>
-                  <div className="flex items-center justify-center w-[450px] h-[450px] bg-[#F05941] rounded-xl mx-3 duration-300">
+                <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1200}>
+                  <div className="flex items-center justify-center w-[450px] h-[450px] bg-[#F05941] rounded-xl mx-3 duration-700">
                         <p>{curLang[index].title}</p>
                         <p>{curLang[index].content}</p>
                   </div>
