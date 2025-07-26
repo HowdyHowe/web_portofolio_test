@@ -66,7 +66,7 @@ function MainSection4() {
       <div className="flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="project">
 
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
-        <div className="flex flex-row items-center justify-center relative w-[90%] h-[70%] snap-start overflow-hidden">
+        <div className="flex flex-row items-center justify-center relative w-[90%] h-[70%] snap-start overflow-hidden mt-[3%]">
 
           <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
             <div className="flex flex-col items-center justify-evenly w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">

@@ -2,10 +2,7 @@ import { useTheme } from "../hooks/theme-hook";
 import Fireflies from "./fireflies";
 import FadeSection from "./fade";
 import TextLoader from "../hooks/text-hook";
-import { BiCodeAlt, BiMobileAlt, BiServer } from "react-icons/bi";
-import { TfiLocationPin } from "react-icons/tfi";
-import { FaUserTie } from "react-icons/fa";
-
+import { MdCode, MdDns, MdEmail, MdLocationPin, MdPerson, MdPhone, MdSmartphone } from "react-icons/md";
 // function RandomColorBox({ colors}: { colors: string[]}) {
 //   const [currentColor, setCurrentColor] = useState(colors[0]);
 
@@ -63,53 +60,61 @@ function MainSection2() {
 
         <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
         <div className="flex flex-col items-center justify-center w-[90%] h-full pt-[100px]">
-          <div className="z-20 w-[300px] min-w-[200px] ">
+          <div className="z-20 w-[200px] min-w-[200px] ">
             <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
               <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="rounded-full"/>
             </FadeSection>
           </div>
           <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
-            <div className="mb-[30px] font-jetbrainsmono text-3xl">I'm Toba Amiruddin Sitorus</div>
+            <div className="mb-[20px] font-jetbrainsmono text-2xl">I'm Toba Amiruddin Sitorus</div>
           </FadeSection>
 
+          <FadeSection durationMs={1200} from="translate-y-[50px]" to="translate-y-0">
+            <span className="font-jetbrainsmono text-8xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
+              About Me
+            </span>
+          </FadeSection>
+          <div className="flex flex-row w-[1000px] min-w-[700px]">
+            <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1700}>
+              <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[28px] mr-2"/>
+            </FadeSection>
+            <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1500}>
+              <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm my-[20px] " />
+            </FadeSection>
+          </div>
           <div className="flex flex-row-reverse items-center justify-center">
-            <div className="flex flex-col items-start w-[500px] min-w-[500px] mb-[25px]">
-              <FadeSection durationMs={1200} from="translate-y-[50px]" to="translate-y-0">
-                <span className="font-jetbrainsmono text-8xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
-                  About Me
-                </span>
+            <div className="flex flex-col items-start justify-center w-[350px] min-w-[350px] mb-[25px]">
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                <div className="flex flex-row items-center justify-center mb-2">
+                  <MdEmail size={40} color="#BE3144" className="w-[60px] h-[60px] p-[15px] mr-2 bg-[#2c2c2c] rounded-lg"/>
+                  <p className="font-jetbrainsmono text-lg text-center">amiruddinamir@gmail.com</p>
+                </div>
               </FadeSection>
-              <div className="flex flex-col">
-                <div className="flex flex-row">
-                  <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1700}>
-                    <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[37px] mr-2"/>
-                  </FadeSection>
-                  <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1500}>
-                    <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm my-[30px] " />
-                  </FadeSection>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                <div className="flex flex-row items-center justify-center mb-2">
+                  <MdPhone size={40} color="#BE3144" className="w-[60px] h-[60px] p-[15px] mr-2 bg-[#2c2c2c] rounded-lg"/>
+                  <p className="font-jetbrainsmono text-lg text-center">+628 12 3456 7890</p>
                 </div>
-                <div className="grid grid-cols-2">
-                  <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
-                    <div className="flex flex-col items-center justify-center">
-                      <TfiLocationPin size={70} color="#BE3144"/>
-                      <p className="font-jetbrainsmono font-bold text-lg mt-4 text-center">Central Java, Indonesia</p>
-                    </div>
-                  </FadeSection>
-                  <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
-                    <div className="flex flex-col items-center justify-center">
-                      <FaUserTie size={70} color="#BE3144"/>
-                      <p className="font-jetbrainsmono font-bold text-lg mt-4 text-center">Available For Work</p>
-                    </div>
-                  </FadeSection>
+              </FadeSection>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                <div className="flex flex-row items-center justify-center mb-2">
+                  <MdLocationPin size={40} color="#BE3144" className="w-[60px] h-[60px] p-[14px] mr-2 bg-[#2c2c2c] rounded-lg"/>
+                  <p className="font-jetbrainsmono text-lg text-center">Central Java, Indonesia</p>
                 </div>
-              </div>
+              </FadeSection>
+              <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
+                <div className="flex flex-row items-center justify-center mb-2">
+                  <MdPerson size={40} color="#BE3144" className="w-[60px] h-[60px] p-[13px] mr-2 bg-[#2c2c2c] rounded-lg"/>
+                  <p className="font-jetbrainsmono text-lg text-center">Available For Work</p>
+                </div>
+              </FadeSection>
             </div>
 
 
-            <div className="flex flex-col items-start justify-start w-[500px]">
+            <div className="flex flex-col items-start justify-start w-[600px]">
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1400}>
                 <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                  <BiCodeAlt size={37} color="#BE3144" className="min-w-[40px]"/>
+                  <MdCode size={37} color="#BE3144" className="min-w-[40px]"/>
                   <p className="font-jetbrainsmono text-xl ml-6">
                     Frontend Development
                   </p>
@@ -118,7 +123,7 @@ function MainSection2() {
               </FadeSection>
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1200}>
                 <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                  <BiServer size={35} color="#BE3144" className="min-w-[40px]"/>
+                  <MdDns  size={35} color="#BE3144" className="min-w-[40px]"/>
                   <p className="font-jetbrainsmono text-xl ml-6">
                     Backend Development
                   </p>
@@ -127,7 +132,7 @@ function MainSection2() {
               </FadeSection>
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
                 <div className="flex flex-row items-center justify-center ml-[3px] py-5 px-8 border-l-2 border-[#872341]">
-                  <BiMobileAlt size={35} color="#BE3144" className="min-w-[40px]"/>
+                  <MdSmartphone size={35} color="#BE3144" className="min-w-[40px]"/>
                   <p className="font-jetbrainsmono text-xl ml-6">
                     Android App Development
                   </p>

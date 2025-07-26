@@ -29,9 +29,9 @@ export default {
         },
       },
       animation: {
-        radioWave1: "waveMove 28s linear infinite",
-        radioWave2: "waveMove 20s linear infinite",
-        radioWave3: "waveMove 12s linear infinite",
+        radioWave1: "waveMove 60s linear infinite",
+        // radioWave2: "waveMove 40s linear infinite",
+        // radioWave3: "waveMove 40s linear infinite",
         blink: "blink 2s ease-in-out infinite",
         fadeIn: "fadeIn 0.7s ease-in-out forwards",
         float: "float 4s ease-in-out infinite",

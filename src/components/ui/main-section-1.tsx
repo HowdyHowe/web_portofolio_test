@@ -45,6 +45,30 @@ function MainSection1() {
                 <TextLoader file="/src/assets/texts/main-section-1.txt" cname="font-jetbrainsmono text-sm mb-[30px]" />
               </FadeSection>
             </div>
+            <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
+              <ul className="flex flex-row items-center justify-start mb-5 gap-[50px]">
+                <li>
+                  <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
+                    <LiaGithub size={40} className="rounded-lg"/>
+                  </TooltipWidget>
+                </li>
+                <li>
+                  <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
+                    <LiaInstagram size={42} className="rounded-lg"/>
+                  </TooltipWidget>
+                </li>
+                <li>
+                  <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
+                    <AiOutlineX size={40} className="rounded-lg p-1"/>
+                  </TooltipWidget>
+                </li>
+                <li>
+                  <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
+                    <LiaLinkedin size={41} className="rounded-lg"/>
+                  </TooltipWidget>
+                </li>
+              </ul>
+            </FadeSection>
             <FadeSection from={"translate-y-[80px]"} to={"translate-y-0"} durationMs={1300}>
                 <div className="flex items-center justify-center w-[250px] h-[50px] bg-[#87234100] rounded-2xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
                   <p className="font-jetbrainsmono text-base"> Download My CV </p><LiaDownloadSolid size={25} className="ml-5"/>
@@ -53,37 +77,7 @@ function MainSection1() {
 
           </div>
 
-          <FadeSection from={"translate-y-[-50px]"} to={"translte-y-0"} durationMs={1300}>
-            <ul className="flex flex-row items-center justify-center mt-[30px] gap-[50px]">
-              {/* <li>
-                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                  <p className="font-jetbrainsmono text-lg mb-2">Find Me On</p>
-                </TooltipWidget>
-              </li> */}
-              <li>
-                <TooltipWidget scale={true} tooltipText="Github" duration="duration-700" link="https://www.google.com/">
-                  <LiaGithub size={40} className="rounded-lg"/>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="Instagram" duration="duration-700" link="https://www.google.com/">
-                  <LiaInstagram size={42} className="rounded-lg"/>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="X (Formerly Twitter)" duration="duration-700" link="https://www.google.com/">
-                  <AiOutlineX size={40} className="rounded-lg p-1"/>
-                </TooltipWidget>
-              </li>
-              <li>
-                <TooltipWidget scale={true} tooltipText="LinkedIn" duration="duration-700" link="https://www.google.com/">
-                  <LiaLinkedin size={41} className="rounded-lg"/>
-                </TooltipWidget>
-              </li>
-            </ul>
-          </FadeSection>
-
-          <div className="grid grid-cols-3 w-[40%] min-w-[600px] mt-[30px]">
+          <div className="grid grid-cols-3 w-[40%] min-w-[600px] mt-[20px]">
             <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1200}>
               <div className="flex flex-col items-center justify-center">
                 <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
@@ -123,12 +117,11 @@ function MainSection1() {
         <div className="w-[25px]"/>
 
         <div>
-
-        <div className="z-10">
-          <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-            <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
-          </FadeSection>
-        </div>
+          <div className="z-10">
+            <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
+              <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
+            </FadeSection>
+          </div>
         </div>
 
       </div>

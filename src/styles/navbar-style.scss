@@ -1,6 +1,6 @@
 // navbar website
 .navbar{
-    @apply fixed grid grid-cols-4 w-[80%] h-[70px] bg-[#0e0e0e] rounded-full mt-1 z-30 font-jetbrainsmono;
+    @apply fixed grid grid-cols-4 w-[70%] h-[70px] bg-[#0e0e0e] rounded-full mt-1 z-30 font-jetbrainsmono;
 
     // menu navbar
     .navbar-content{
@@ -13,7 +13,7 @@
     }
 
     .navbar-content-item-active{
-        @apply flex flex-row items-center justify-center min-w-[100px] border-b border-[#872341] scale-105 ;
+        @apply flex flex-row items-center justify-center min-w-[100px] border-b border-[#872341] scale-110 ;
     }
 
     // dropdown website
