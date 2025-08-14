@@ -1,64 +1,22 @@
-import { useTheme } from "../hooks/theme-hook";
+// import { useTheme } from "../hooks/theme-hook";
 import Fireflies from "./fireflies";
 import FadeSection from "./fade";
 import TextLoader from "../hooks/text-hook";
 import { MdCode, MdDns, MdEmail, MdLocationPin, MdPerson, MdPhone, MdSmartphone } from "react-icons/md";
-// function RandomColorBox({ colors}: { colors: string[]}) {
-//   const [currentColor, setCurrentColor] = useState(colors[0]);
 
-//   useEffect(() => {
-//     const randomDuration = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000;
-//     const interval = setInterval(() => {
-//       const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//       setCurrentColor(randomColor);
-//     }, randomDuration);
-
-//     return () => clearInterval(interval); // cleanup
-//   }, [colors]);
-
-//   return (
-//     // <div className={`w-40 h-40`} style={{ backgroundColor: currentColor }}>
-//     //   <p className="text-white text-center pt-16">{currentColor}</p>
-//     // </div>
-//     <div className="border-[#2c2c2c] border-b-[8px]" style={{backgroundColor: currentColor}}/>
-//   );
-// }
 
 function MainSection2() {
-  // const colorList = ["#d1d1d1", "#000000", "#939393", "#a3a3a3", "#808080"]
-  const {isDark} = useTheme();
+  // Hook useTheme pada section 2
+  // const {isDark} = useTheme();
 
   return (
     <div className="flex flex-row items-end justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden" id="aboutme">
 
-        {/* <div className="flex-1 grid grid-rows-24 h-[60%] text-xs">
-          <RandomColorBox colors={colorList}/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-          <RandomColorBox colors={colorList}/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#4e4e4e] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#808080] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#808080] border-[#2c2c2c] border-b-[8px]"/>
-          <div className="bg-[#808080] border-[#2c2c2c] border-b-[8px]"/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#808080] border-[#2c2c2c] border-b-[8px]"/>
-          <RandomColorBox colors={colorList}/>
-          <div className="bg-[#808080] border-[#2c2c2c] border-b-[8px]"/>
-        </div> */}
+        {/* Penggunaan useTheme hook */}
+        {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} /> */}
 
+        <Fireflies count={25} color="#FAF6E9"/>
 
-        <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
         <div className="flex flex-col items-center justify-center w-[90%] h-full pt-[100px]">
           <div className="z-20 w-[200px] min-w-[200px] ">
             <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
@@ -142,71 +100,6 @@ function MainSection2() {
             </div>
           </div>
         </div>
-
-
-        {/* <div className="flex-1 grid grid-cols-2 h-[80%]">
-          <div className="grid grid-rows-28">
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#a3a3a3] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-          </div>
-          <div className="grid grid-rows-28">
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#000000] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#d1d1d1] border-[#2c2c2c] border-b-[8px]"/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-            <RandomColorBox colors={colorList}/>
-            <div className="bg-[#939393] border-[#2c2c2c] border-b-[8px]"/>
-          </div>
-        </div> */}
-
       </div>
     );
   }

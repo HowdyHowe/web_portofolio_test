@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineX } from 'react-icons/ai'
 import { LiaGithub, LiaInstagram, LiaLinkedin } from 'react-icons/lia';
 import TooltipWidget from '../ui/tooltip';
+// import { useTheme } from '../hooks/theme-hook';
 
 function Navbar({active} : {active:string}) {
     const [isNavbar, setIsNavbar] = useState(true);
+    // custom hook untuk tema
+    // const {isDark, setIsDark} = useTheme();
 
     const handleNavbar = () => {
       setIsNavbar(!isNavbar);
@@ -31,13 +34,13 @@ function Navbar({active} : {active:string}) {
             <a href="#aboutme" className={`${active == "aboutme"? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>About Me</a>
             <a href="#resume" className={`${active == "resume" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Resume</a>
             <a href="#project" className={`${active == "project" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Projects</a>
-            <a href="#contact" className={`${active == "contact" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Contact</a>
           </ul>
 
+          {/* Gunakan tag ini untuk membuat tombol dark mode */}
+          {/* <div onClick={() => setIsDark(!isDark)}>tombol disini</div> */}
+
           <div className="flex items-center justify-center">
-            <div className="flex items-center justify-center w-[100px] p-3 font-jetbrainsmono border border-[#872341] hover:border-[#F02341] rounded-xl duration-500">
-              <p>Hire Me</p>
-            </div>
+            <a href="#contact" className={`flex items-center justify-center w-[100px] p-3 font-jetbrainsmono border ${active == "contact" ? "border-[#F02341]" : "border-[#872341]"} rounded-xl duration-500 `}>Hire Me</a>
             <div className="flex items-center justify-center w-8 lg:hidden" onClick={handleNavbar}>
               {isNavbar ? <AiOutlineMenu size={22} /> : <AiOutlineClose size={22} />}
             </div>

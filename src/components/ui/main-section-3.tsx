@@ -1,11 +1,13 @@
+// import { useTheme } from "../hooks/theme-hook";
 import { useState } from "react";
 import TextLoader from "../hooks/text-hook";
-import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
-import { BiBook, BiBrain, BiBriefcase, BiCertification,  } from "react-icons/bi";
 import TooltipWidget from "./tooltip";
+import { FaFlutter, FaPython } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
+import { BiBook, BiBrain, BiBriefcase, BiCertification,  } from "react-icons/bi";
+import { SiExpress, SiFlask, SiGit, SiJavascript, SiKotlin, SiMysql, SiNextdotjs, SiReact, SiSqlite, SiTypescript, SiUbuntu } from "react-icons/si";
 
 
 const educationsList = [
@@ -27,18 +29,19 @@ const experiencesList = [
 ]
 
 const languageList = [
-    "Python",
-    "Flask",
-    "Flutter",
-    "Javascript",
-    "Typescript",
-    "Kotlin",
-    "React",
-    "Git",
-    "Ubuntu",
-    "ExpressJs",
-    "MySql",
-    "Sqlite",
+    {key: "1", icon: <FaPython size={46} color="#BE3144"/>},
+    {key: "2", icon: <SiFlask size={42} color="#BE3144"/>},
+    {key: "3", icon: <FaFlutter size={40} color="#BE3144"/>},
+    {key: "4", icon: <SiJavascript size={40} color="#BE3144"/>},
+    {key: "5", icon: <SiTypescript size={40} color="#BE3144"/>},
+    {key: "6", icon: <SiKotlin size={35} color="#BE3144"/>},
+    {key: "7", icon: <SiReact size={40} color="#BE3144"/>},
+    {key: "8", icon: <SiNextdotjs size={40} color="#BE3144"/>},
+    {key: "9", icon: <SiGit size={40} color="#BE3144"/>},
+    {key: "10", icon: <SiUbuntu size={40} color="#BE3144"/>},
+    {key: "11", icon: <SiExpress size={43} color="#BE3144"/>},
+    {key: "12", icon: <SiMysql size={45} color="#BE3144"/>},
+    {key: "13", icon: <SiSqlite size={40} color="#BE3144"/>},
 ]
 
 const certificationsList = [
@@ -69,11 +72,11 @@ function EducationsCard() {
             <div className="grid grid-cols-2 gap-4 font-jetbrainsmono">
                 {
                     educationsList.map(({organizer, event, year}) => (
-                            <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
-                                <p className="text-sm">{organizer}</p>
-                                <p className="text-xl">{event}</p>
-                                <p className="text-xs">• {year}</p>
-                            </div>
+                        <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                            <p className="text-sm">{organizer}</p>
+                            <p className="text-xl">{event}</p>
+                            <p className="text-xs">• {year}</p>
+                        </div>
                     ))
                 }
             </div>
@@ -87,11 +90,11 @@ function ExperiencesCard() {
             <div className="grid grid-cols-2 gap-4 font-jetbrainsmono">
                 {
                     experiencesList.map(({organizer, event, year}) => (
-                            <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
-                                <p className="text-sm">{organizer}</p>
-                                <p className="text-xl">{event}</p>
-                                <p className="text-xs">• {year}</p>
-                            </div>
+                        <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                            <p className="text-sm">{organizer}</p>
+                            <p className="text-xl">{event}</p>
+                            <p className="text-xs">• {year}</p>
+                        </div>
                     ))
                 }
             </div>
@@ -103,10 +106,10 @@ function SkillsCard(){
     return(
             <div className="grid grid-cols-5 gap-4">
                 {
-                    languageList.map((language, index) => (
-                        <FadeSection key={language} from="translate-y-[80px]" to="translate-p-0" durationMs={700 + (index * 100)}>
-                            <div className="flex flex-col items-center justify-center w-[100px] h-[100px] bg-[#87234100] rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
-                                <img src={`/src/assets/images/${language}.svg`} alt={language} className="w-[50px] rounded-md "/>
+                    languageList.map(({key, icon,}, index) => (
+                        <FadeSection key={key} from="translate-y-[80px]" to="translate-p-0" durationMs={700 + (index * 100)}>
+                            <div className="flex flex-col items-center justify-center w-[100px] h-[100px] p-[14px] mr-2 bg-[#2c2c2c] rounded-lg">
+                                {icon}
                             </div>
                         </FadeSection>
                     ))
@@ -121,11 +124,11 @@ function CertificationsCard() {
             <div className="grid grid-cols-2 gap-4 font-jetbrainsmono">
                 {
                     certificationsList.map(({organizer, event, year}) => (
-                            <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
-                                <p className="text-sm text-[#F05941]">{organizer}</p>
-                                <p className="text-xl">{event}</p>
-                                <p className="text-xs opacity-75">• {year}</p>
-                            </div>
+                        <div className="flex flex-col h-[150px] items-start justify-evenly px-5 rounded-xl border-2 border-[#872341] hover:border-[#F05941] duration-500">
+                            <p className="text-sm text-[#F05941]">{organizer}</p>
+                            <p className="text-xl">{event}</p>
+                            <p className="text-xs opacity-75">• {year}</p>
+                        </div>
                     ))
                 }
             </div>
@@ -135,8 +138,8 @@ function CertificationsCard() {
 
 
 function MainSection3() {
-
-    const {isDark} = useTheme()
+    // hook useTheme pada section 3
+    // const {isDark} = useTheme()
     const [curInfo, setInfo] = useState("Educations")
 
     const changeInfo = (info:string) => {
@@ -146,7 +149,10 @@ function MainSection3() {
     return(
         <div className="flex flex-row items-center justify-center w-full h-screen relative snap-start scroll-smooth overflow-hidden" id="resume">
 
-            <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} />
+            {/* Penggunaan useTheme hook */}
+            {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} /> */}
+
+            <Fireflies count={25} color={"#FAF6E9"} />
 
             <div className="flex flex-row items-center justify-center h-full">
                 <div className="flex flex-col w-[350px] items-start justify-center">

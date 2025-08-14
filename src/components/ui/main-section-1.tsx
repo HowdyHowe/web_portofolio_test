@@ -1,21 +1,27 @@
-import { LiaDownloadSolid, LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
-import { useTheme } from "../hooks/theme-hook";
+// import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
 import TextLoader from "../hooks/text-hook";
 import TooltipWidget from "./tooltip";
 import { AiOutlineX } from "react-icons/ai";
+import { LiaDownloadSolid, LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
 
 function MainSection1() {
-  const {isDark} = useTheme();
+  // Hook useTheme pada section 1
+  // const {isDark} = useTheme();
 
   return (
     <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="home">
 
+      {/* penggunaan useTheme hook untuk gambar latar belakang */}
       {/* <div className="absolute inset-0 bg-cover bg-center z-10 "
           style={{ backgroundImage: isDark ? "url('/src/assets/images/background-section-1-light.svg')": "url('/src/assets/images/background-section-1-dark.svg')"  }}/> */}
       <div className="flex flex-row-reverse items-center justify-center z-20 mt-[2%]">
-        <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
+
+        {/* Penggunaan useTheme hook */}
+        {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/> */}
+
+        <Fireflies count={25} color="#FAF6E9"/>
 
         <div className="flex flex-col items-start justify-between w-[35%] min-w-[550px] m-6">
           <div>
@@ -74,7 +80,6 @@ function MainSection1() {
                   <p className="font-jetbrainsmono text-base"> Download My CV </p><LiaDownloadSolid size={25} className="ml-5"/>
                 </div>
             </FadeSection>
-
           </div>
 
           <div className="grid grid-cols-3 w-[40%] min-w-[600px] mt-[20px]">
@@ -113,7 +118,7 @@ function MainSection1() {
           </div>
         </div>
 
-        {/* blocksized for space */}
+        {/* blocksized untuk jarak */}
         <div className="w-[25px]"/>
 
         <div>

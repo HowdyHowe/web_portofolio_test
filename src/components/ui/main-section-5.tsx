@@ -1,24 +1,28 @@
-import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
-import { useTheme } from "../hooks/theme-hook";
+// import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
 import TooltipWidget from "./tooltip";
+import TestWidget from "./stringwave";
 import Wave from "./wave";
 import { AiOutlineX } from "react-icons/ai";
 import { BiCopyright } from "react-icons/bi";
-import TestWidget from "./stringwave";
+import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
 
 function MainSection5() {
-  const {isDark} = useTheme();
+  // hook useTheme pada section 5
+  // const {isDark} = useTheme();
 
     return (
       <div className="flex flex-row items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden" id="contact">
+        {/* Penggunaan useTheme hook */}
+        {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/> */}
 
-        <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
+        <Fireflies count={25} color={"#FAF6E9"}/>
+
         <div className="z-50">
           <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1000}>
             <form action="" method="post" className="flex flex-col items-center justify-center w-[700px] h-[700px] max-h-[75%] rounded-3xl bg-[#0e0e0e]">
-              <p className="font-jetbrainsmono text-2xl mb-1">Connect With Me</p>
+              <p className="font-jetbrainsmono text-2xl mb-1">Let's Work Together</p>
               <span className="font-jetbrainsmono text-6xl font-bold bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
                 Send Me a Message
               </span>

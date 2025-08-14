@@ -1,9 +1,9 @@
-interface SnakeProps {
+interface String {
   time: string;
   color:string;
 }
 
-const RadioWave = ({time, color}: SnakeProps) => {
+function String({time, color}: String) {
 return (
       <div className="overflow-hidden w-full h-full relative z-0">
         <svg
@@ -22,4 +22,4 @@ return (
     );
   };
 
-  export default RadioWave;
+  export default String;

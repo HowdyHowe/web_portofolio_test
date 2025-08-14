@@ -1,5 +1,5 @@
+// import { useTheme } from "../hooks/theme-hook";
 import { useState } from "react";
-import { useTheme } from "../hooks/theme-hook";
 import FadeSection from "./fade";
 import Fireflies from "./fireflies";
 import TooltipWidget from "./tooltip";
@@ -47,7 +47,8 @@ const progLanguage = {
 };
 
 function MainSection4() {
-  const {isDark} = useTheme();
+  // hook useTheme pada section 4
+  // const {isDark} = useTheme();
   const [index, setIndex] = useState(0);
   const [lang, setLang] = useState<keyof typeof progLanguage>("dart")
 
@@ -64,10 +65,12 @@ function MainSection4() {
 
     return (
       <div className="flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="project">
+        {/* Penggunaan useTheme hook */}
+        {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/> */}
 
-        <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/>
+        <Fireflies count={25} color={"#FAF6E9"}/>
+
         <div className="flex flex-row items-center justify-center relative w-[90%] h-[70%] snap-start overflow-hidden mt-[3%]">
-
           <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
             <div className="flex flex-col items-center justify-evenly w-[80px] h-[550px] min-w-[80px] border-2 border-[#872341] rounded-s-3xl text-center hover:w-[130px] duration-300">
               <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1000}>
