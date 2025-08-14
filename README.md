@@ -5,29 +5,30 @@ Template website portofolio ini dibuat untuk membantu siapa saja yang ingin mena
 ------------------------------------------------------------
 📦 Teknologi yang Digunakan
 ------------------------------------------------------------
-- Frontend: HTML5, CSS3, JavaScript (atau framework yang digunakan)
-- Library/Framework Tambahan: (contoh: TailwindCSS, Bootstrap, dsb)
+- React Typescript
+- Tailwind CSS
+- Vite
 
 ------------------------------------------------------------
 🚀 Cara Menggunakan
 ------------------------------------------------------------
 1. Clone repository ini:
-   git clone https://github.com/username/nama-repo.git
+   ```git clone https://github.com/username/web-portofolio-test.git```
 
 2. Masuk ke folder project:
-   cd nama-repo
+   ```cd nama-repo```
 
 3. (Opsional, jika menggunakan npm/yarn) Install dependencies:
-   npm install
+   ```npm install```
 
 4. Jalankan di lokal:
-   npm run dev
+   ```npm run dev```
 
 5. Buka di browser:
    http://localhost:3000
 
 ------------------------------------------------------------
-🖼️ Demo
+🖼️ Tampilan
 ------------------------------------------------------------
 - Home
     ![Home](/src/assets/images/png/image-1.png)
