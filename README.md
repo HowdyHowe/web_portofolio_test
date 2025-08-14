@@ -29,23 +29,17 @@ Template website portofolio ini dibuat untuk membantu siapa saja yang ingin mena
 ------------------------------------------------------------
 🖼️ Demo
 ------------------------------------------------------------
-Tambahkan link demo atau screenshot.
-Contoh: https://contoh-link-demo.com
+- Home
+    ![Home](/src/assets/images/png/image-1.png)
 
-------------------------------------------------------------
-📄 Lisensi
-------------------------------------------------------------
-Proyek ini menggunakan lisensi MIT – silakan gunakan, modifikasi, dan sebarkan dengan tetap mencantumkan kredit.
+- About Me
+    ![About Me](/src/assets/images/png/image-2.png)
 
-------------------------------------------------------------
-🤝 Kontribusi
-------------------------------------------------------------
-Kontribusi sangat diterima!
-Silakan buat Pull Request atau Issue untuk menambahkan fitur atau memperbaiki bug.
+- Resume
+    ![Resume](/src/assets/images/png/image-3.png)
 
-------------------------------------------------------------
-📬 Kontak
-------------------------------------------------------------
-- Email: yourname@email.com
-- LinkedIn: https://linkedin.com/in/username
-- Website Pribadi: https://yourwebsite.com
+- Project
+    ![Project](/src/assets/images/png/image-4.png)
+
+- Hire Me
+    ![Hire Me](/src/assets/images/png/image-5.png)

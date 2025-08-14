@@ -20,11 +20,11 @@ function MainSection2() {
         <div className="flex flex-col items-center justify-center w-[90%] h-full pt-[100px]">
           <div className="z-20 w-[200px] min-w-[200px] ">
             <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={1000}>
-              <img src="/src/assets/images/picxample.jpg" alt="profile picture" className="rounded-full"/>
+              <img src="/src/assets/images/jpg/picxample.jpg" alt="profile picture" className="rounded-full"/>
             </FadeSection>
           </div>
           <FadeSection from={"translate-y-[50px]"} to={"translate-y-0"} durationMs={700}>
-            <div className="mb-[20px] font-jetbrainsmono text-2xl">I'm Toba Amiruddin Sitorus</div>
+            <div className="mb-[20px] font-jetbrainsmono text-2xl">I'm -Your Long Name Here-</div>
           </FadeSection>
 
           <FadeSection durationMs={1200} from="translate-y-[50px]" to="translate-y-0">
@@ -45,7 +45,7 @@ function MainSection2() {
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
                 <div className="flex flex-row items-center justify-center mb-2">
                   <MdEmail size={40} color="#BE3144" className="w-[60px] h-[60px] p-[15px] mr-2 bg-[#2c2c2c] rounded-lg"/>
-                  <p className="font-jetbrainsmono text-lg text-center">amiruddinamir@gmail.com</p>
+                  <p className="font-jetbrainsmono text-lg text-center">example@gmail.com</p>
                 </div>
               </FadeSection>
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
@@ -57,7 +57,7 @@ function MainSection2() {
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>
                 <div className="flex flex-row items-center justify-center mb-2">
                   <MdLocationPin size={40} color="#BE3144" className="w-[60px] h-[60px] p-[14px] mr-2 bg-[#2c2c2c] rounded-lg"/>
-                  <p className="font-jetbrainsmono text-lg text-center">Central Java, Indonesia</p>
+                  <p className="font-jetbrainsmono text-lg text-center">Central Sumatra, Indonesia</p>
                 </div>
               </FadeSection>
               <FadeSection from={"translate-y-[-70px]"} to={"translate-y-0"} durationMs={1000}>

@@ -81,7 +81,7 @@ function MainSection5() {
             <FadeSection from={"translate-x-[-50px]"} to={"translte-y-0"} durationMs={1300}>
               <div className="flex flex-row">
                 <BiCopyright size={25} className="mr-2"/>
-                <p className="font-jetbrainsmono text-base mt-[2px]">Toba Amiruddin Sitorus. All Right Reserved</p>
+                <p className="font-jetbrainsmono text-base mt-[2px]">example name. All Right Reserved</p>
               </div>
             </FadeSection>
           </div>

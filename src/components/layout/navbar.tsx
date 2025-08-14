@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineX } from 'react-icons/ai'
 import { LiaGithub, LiaInstagram, LiaLinkedin } from 'react-icons/lia';
-import TooltipWidget from '../ui/tooltip';
+import TooltipWidget from '../widget/tooltip';
 // import { useTheme } from '../hooks/theme-hook';
 
 function Navbar({active} : {active:string}) {
@@ -28,7 +28,7 @@ function Navbar({active} : {active:string}) {
     return (
       <header className='fixed flex items-center justify-center w-full h-[80px] bg-black z-30'>
         <div className={`${active == "home" ? "navbar" : "navbar-out"} animate-fadeIn transition-all duration-1000`}>
-          <h1 className="flex items-center justify-center text-xl">TOBA</h1>
+          <h1 className="flex items-center justify-center text-xl">LOGO</h1>
           <ul className="navbar-content">
             <a href="#home" className={`${active == "home" ? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>Home</a>
             <a href="#aboutme" className={`${active == "aboutme"? "navbar-content-item-active" : "navbar-content-item"} duration-300`}>About Me</a>

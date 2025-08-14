@@ -32,7 +32,7 @@ function MainSection1() {
             </FadeSection>
             <FadeSection from={"translate-y-[-80px]"} to={"translate-y-0"} durationMs={1500}>
               <span className="font-jetbrainsmono text-8xl bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
-                I'm Toba
+                I'm Your Name
               </span>
             </FadeSection>
             <div className="flex flex-row items-center">
@@ -124,7 +124,7 @@ function MainSection1() {
         <div>
           <div className="z-10">
             <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1000}>
-              <img src="/src/assets/images/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
+              <img src="/src/assets/images/jpg/picxample2.jpg" alt="profile picture" className="w-[450px] max-w-[200] rounded-xl m-5"/>
             </FadeSection>
           </div>
         </div>

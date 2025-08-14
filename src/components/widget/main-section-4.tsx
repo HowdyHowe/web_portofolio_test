@@ -131,7 +131,7 @@ function MainSection4() {
                   transition={{ duration: 0.3 }}
                   >
                     <FadeSection from="translate-y-[50px]" to="translate-y-0" durationMs={1200}>
-                      <div className="grid grid-rows-3 w-full h-[400px]">
+                      <div className="grid grid-rows-3 w-[650px] h-[400px]">
                         <div className="flex items-start justify-start">
                           {/* <p className="font-jetbrainsmono text-5xl font-bold truncate duration-300">{index + 1}. {lang}</p> */}
                           <span className="font-jetbrainsmono text-6xl font-bold bg-gradient-to-r from-[#872341] to-[#F05941] bg-clip-text text-transparent">
@@ -142,7 +142,7 @@ function MainSection4() {
                           <FadeSection from={"translate-x-[50px]"} to={"translate-y-0"} durationMs={1200}>
                             <div className="w-[50px] h-[5px] bg-[#F05941]  rounded-2xl mt-[10px] mr-2"/>
                           </FadeSection>
-                          <p className="font-jetbrainsmono text-base">contoh teks contoh teks contoh teks contoh teks contoh teks </p>
+                          <p className="font-jetbrainsmono text-base">{curLang[index].content}</p>
                         </div>
                         <div className="flex flex-row items-start justify-end border-t border-[#F05941]">
                           <TooltipWidget scale={true} tooltipText="Go To Github Page" duration="duration-700" link="https://github.com">
@@ -164,15 +164,14 @@ function MainSection4() {
                 >
                 <FadeSection from="translate-y-[-50px]" to="translate-y-0" durationMs={1200}>
                   <div className="flex items-center justify-center w-[450px] h-[450px] bg-[#F05941] rounded-xl mx-3 duration-700">
-                        <p>{curLang[index].title}</p>
-                        <p>{curLang[index].content}</p>
+                        <p>image here</p>
                   </div>
                 </FadeSection>
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            <div className="flex flex-row w-full h-[60px] items-center mx-[5%] py-2">
+            <div className="flex flex-row w-full h-[60px] items-center mx-7 py-2">
 
               <FadeSection from="translate-x-[30px]" to="translate-y-0" durationMs={1500}>
                 <TooltipWidget scale={true} tooltipText="Previous" duration="duration-700" onClick={prev}>

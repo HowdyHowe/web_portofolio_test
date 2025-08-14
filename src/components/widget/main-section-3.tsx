@@ -104,17 +104,17 @@ function ExperiencesCard() {
 
 function SkillsCard(){
     return(
+        <FadeSection from="translate-y-[80px]" to="translate-p-0" durationMs={700}>
             <div className="grid grid-cols-5 gap-4">
                 {
-                    languageList.map(({key, icon,}, index) => (
-                        <FadeSection key={key} from="translate-y-[80px]" to="translate-p-0" durationMs={700 + (index * 100)}>
-                            <div className="flex flex-col items-center justify-center w-[100px] h-[100px] p-[14px] mr-2 bg-[#2c2c2c] rounded-lg">
+                    languageList.map(({key, icon,}) => (
+                            <div key={key} className="flex flex-col items-center justify-center w-[100px] h-[100px] p-[14px] mr-2 bg-[#2c2c2c] rounded-lg">
                                 {icon}
                             </div>
-                        </FadeSection>
                     ))
                 }
             </div>
+        </FadeSection>
     );
 }
 
