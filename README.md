@@ -12,20 +12,30 @@ Template website portofolio ini dibuat untuk membantu siapa saja yang ingin mena
 ------------------------------------------------------------
 🚀 Cara Menggunakan
 ------------------------------------------------------------
-1. Clone repository ini:
-   ```git clone https://github.com/username/web-portofolio-test.git```
+1. Clone repository ini
+   ```bash
+   git clone https://github.com/username/web-portofolio-test.git
+   ```
 
-2. Masuk ke folder project:
-   ```cd nama-repo```
+2. Masuk ke folder project
+   ```bash
+   cd nama-repo
+   ```
 
-3. (Opsional, jika menggunakan npm/yarn) Install dependencies:
-   ```npm install```
+3. (Opsional, jika menggunakan npm/yarn) Install dependencies
+   ```bash
+   npm install
+   ```
 
-4. Jalankan di lokal:
-   ```npm run dev```
+4. Jalankan di lokal
+   ```bash
+   npm run dev
+   ```
 
-5. Buka di browser:
+5. Buka di browser
+   ```bash
    http://localhost:3000
+   ```
 
 ------------------------------------------------------------
 🖼️ Tampilan

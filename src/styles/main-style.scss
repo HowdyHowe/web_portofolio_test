@@ -1,6 +1,23 @@
 .main{
     @apply h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-none;
+
+    .main-section-1 {
+        @apply flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden
+    }
+
+    .main-section-2 {
+        @apply flex flex-row items-end justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden
+    }
+
+    .main-section-3 {
+        @apply flex flex-row items-center justify-center w-full h-screen relative snap-start scroll-smooth overflow-hidden
+    }
+
+    .main-section-4 {
+        @apply flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden
+    }
+
+    .main-section-5 {
+        @apply flex flex-row items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden
+    }
 }
-// .main{
-//     @apply h-screen overflow-y-scroll scrollbar-none;
-// }

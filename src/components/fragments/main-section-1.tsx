@@ -1,8 +1,8 @@
 // import { useTheme } from "../hooks/theme-hook";
-import FadeSection from "./fade";
-import Fireflies from "./fireflies";
+import FadeSection from "../widget/fade";
+import Fireflies from "../widget/fireflies";
 import TextLoader from "../hooks/text-hook";
-import TooltipWidget from "./tooltip";
+import TooltipWidget from "../widget/tooltip";
 import { AiOutlineX } from "react-icons/ai";
 import { LiaDownloadSolid, LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
 
@@ -11,7 +11,7 @@ function MainSection1() {
   // const {isDark} = useTheme();
 
   return (
-    <div className="flex flex-col items-center justify-center relative w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="home">
+    <div className="main-section-1" id="home">
 
       {/* penggunaan useTheme hook untuk gambar latar belakang */}
       {/* <div className="absolute inset-0 bg-cover bg-center z-10 "

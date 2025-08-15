@@ -1,9 +1,9 @@
 // import { useTheme } from "../hooks/theme-hook";
-import FadeSection from "./fade";
-import Fireflies from "./fireflies";
-import TooltipWidget from "./tooltip";
-import TestWidget from "./stringwave";
-import Wave from "./wave";
+import FadeSection from "../widget/fade";
+import Fireflies from "../widget/fireflies";
+import TooltipWidget from "../widget/tooltip";
+import TestWidget from "../widget/stringwave";
+import Wave from "../widget/wave";
 import { AiOutlineX } from "react-icons/ai";
 import { BiCopyright } from "react-icons/bi";
 import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
@@ -13,7 +13,7 @@ function MainSection5() {
   // const {isDark} = useTheme();
 
     return (
-      <div className="flex flex-row items-center justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden" id="contact">
+      <div className="main-section-5" id="contact">
         {/* Penggunaan useTheme hook */}
         {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/> */}
 

@@ -1,6 +1,6 @@
 // import { useTheme } from "../hooks/theme-hook";
-import Fireflies from "./fireflies";
-import FadeSection from "./fade";
+import Fireflies from "../widget/fireflies";
+import FadeSection from "../widget/fade";
 import TextLoader from "../hooks/text-hook";
 import { MdCode, MdDns, MdEmail, MdLocationPin, MdPerson, MdPhone, MdSmartphone } from "react-icons/md";
 
@@ -10,7 +10,7 @@ function MainSection2() {
   // const {isDark} = useTheme();
 
   return (
-    <div className="flex flex-row items-end justify-center relative w-full h-screen bg-cover bg-center snap-start scroll-smooth overflow-hidden" id="aboutme">
+    <div className="main-section-2" id="aboutme">
 
         {/* Penggunaan useTheme hook */}
         {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} /> */}

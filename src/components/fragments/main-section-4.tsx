@@ -1,8 +1,8 @@
 // import { useTheme } from "../hooks/theme-hook";
 import { useState } from "react";
-import FadeSection from "./fade";
-import Fireflies from "./fireflies";
-import TooltipWidget from "./tooltip";
+import FadeSection from "../widget/fade";
+import Fireflies from "../widget/fireflies";
+import TooltipWidget from "../widget/tooltip";
 import { SiJavascript, SiKotlin, SiPhp} from "react-icons/si";
 import { FaDartLang, FaPython } from "react-icons/fa6";
 import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
@@ -64,7 +64,7 @@ function MainSection4() {
   }
 
     return (
-      <div className="flex flex-col relative items-center justify-center w-full h-screen bg-cover bg-center snap-start overflow-hidden" id="project">
+      <div className="main-section-4" id="project">
         {/* Penggunaan useTheme hook */}
         {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"}/> */}
 

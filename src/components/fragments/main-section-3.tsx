@@ -1,9 +1,9 @@
 // import { useTheme } from "../hooks/theme-hook";
 import { useState } from "react";
 import TextLoader from "../hooks/text-hook";
-import FadeSection from "./fade";
-import Fireflies from "./fireflies";
-import TooltipWidget from "./tooltip";
+import FadeSection from "../widget/fade";
+import Fireflies from "../widget/fireflies";
+import TooltipWidget from "../widget/tooltip";
 import { FaFlutter, FaPython } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { BiBook, BiBrain, BiBriefcase, BiCertification,  } from "react-icons/bi";
@@ -147,7 +147,7 @@ function MainSection3() {
     }
 
     return(
-        <div className="flex flex-row items-center justify-center w-full h-screen relative snap-start scroll-smooth overflow-hidden" id="resume">
+        <div className="main-section-3" id="resume">
 
             {/* Penggunaan useTheme hook */}
             {/* <Fireflies count={25} color={isDark ? "#2c2c2c": "#FAF6E9"} /> */}
