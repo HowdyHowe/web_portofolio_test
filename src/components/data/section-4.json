@@ -1,0 +1,38 @@
+{
+    "progLanguage": {
+        "dart": [
+            { "title": "Dart 1", "content": "Swipe me!" },
+            { "title": "Dart 2", "content": "Nice!" },
+            { "title": "Dart 3", "content": "Keep going" },
+            { "title": "Dart 4", "content": "Almost done" },
+            { "title": "Dart 5", "content": "Great!" }
+        ],
+        "kotlin": [
+            { "title": "Kotlin 1", "content": "Swipe me!" },
+            { "title": "Kotlin 2", "content": "Nice!" },
+            { "title": "Kotlin 3", "content": "Keep going" },
+            { "title": "Kotlin 4", "content": "Almost done" },
+            { "title": "Kotlin 5", "content": "Great!" }
+        ],
+        "php": [
+            { "title": "PHP 1", "content": "Swipe me!" },
+            { "title": "PHP 2", "content": "Nice!" },
+            { "title": "PHP 3", "content": "Keep going" },
+            { "title": "PHP 4", "content": "Almost done" },
+            { "title": "PHP 5", "content": "Great!" }
+        ],
+        "javascript": [
+            { "title": "Javascript 1", "content": "Swipe me!" },
+            { "title": "Javascript 2", "content": "Nice!" },
+            { "title": "Javascript 3", "content": "Keep going" },
+            { "title": "Javascript 4", "content": "Almost done" }
+        ],
+        "python": [
+            { "title": "Python 1", "content": "Swipe me!" },
+            { "title": "Python 2", "content": "Nice!" },
+            { "title": "Python 3", "content": "Keep going" },
+            { "title": "Python 4", "content": "Almost done" },
+            { "title": "Python 5", "content": "Great!" }
+        ]
+    }
+}

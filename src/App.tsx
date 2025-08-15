@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import ThemeProvider from "./components/hooks/theme-hook"
-import Main from "./components/layout/main-content"
+import Main from "./components/layout/main"
 import Navbar from "./components/layout/navbar"
 import './styles/navbar-style.scss'
 import './styles/main-style.scss'

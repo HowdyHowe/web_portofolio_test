@@ -1,0 +1,28 @@
+{
+    "educationsList": [
+        {"organizer": "Contoh PT", "event":"Contoh Kegiatan 1", "year":"2020 - 2022"},
+        {"organizer": "Contoh PT", "event":"Contoh Kegiatan 2", "year":"2020 - 2022"},
+        {"organizer": "Contoh PT", "event":"Contoh Kegiatan 3", "year":"2020 - 2022"},
+        {"organizer": "Contoh PT", "event":"Contoh Kegiatan 4", "year":"2020 - 2022"},
+        {"organizer": "Contoh PT", "event":"Contoh Kegiatan 5", "year":"2020 - 2022"},
+        {"organizer": "Contoh PT", "event":"Contoh Kegiatan 6", "year":"2020 - 2022"}
+    ],
+
+    "experiencesList": [
+        {"organizer": "Contoh Pengalaman", "event":"Contoh Pengalaman 1", "year":"2020 - 2022"},
+        {"organizer": "Contoh Pengalaman", "event":"Contoh Pengalaman 2", "year":"2020 - 2022"},
+        {"organizer": "Contoh Pengalaman", "event":"Contoh Pengalaman 3", "year":"2020 - 2022"},
+        {"organizer": "Contoh Pengalaman", "event":"Contoh Pengalaman 4", "year":"2020 - 2022"},
+        {"organizer": "Contoh Pengalaman", "event":"Contoh Pengalaman 5", "year":"2020 - 2022"},
+        {"organizer": "Contoh Pengalaman", "event":"Contoh Pengalaman 6", "year":"2020 - 2022"}
+    ],
+
+    "certificationsList": [
+        {"organizer": "Contoh Sertifikat", "event":"Contoh Sertifikat 6", "year":"2020 - 2022"},
+        {"organizer": "Contoh Sertifikat", "event":"Contoh Sertifikat 1", "year":"2020 - 2022"},
+        {"organizer": "Contoh Sertifikat", "event":"Contoh Sertifikat 2", "year":"2020 - 2022"},
+        {"organizer": "Contoh Sertifikat", "event":"Contoh Sertifikat 3", "year":"2020 - 2022"},
+        {"organizer": "Contoh Sertifikat", "event":"Contoh Sertifikat 4", "year":"2020 - 2022"},
+        {"organizer": "Contoh Sertifikat", "event":"Contoh Sertifikat 5", "year":"2020 - 2022"}
+    ]
+}

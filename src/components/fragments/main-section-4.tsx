@@ -3,60 +3,24 @@ import { useState } from "react";
 import FadeSection from "../widget/fade";
 import Fireflies from "../widget/fireflies";
 import TooltipWidget from "../widget/tooltip";
+import data from "../data/section-4.json"
 import { SiJavascript, SiKotlin, SiPhp} from "react-icons/si";
 import { FaDartLang, FaPython } from "react-icons/fa6";
 import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaGithub } from "react-icons/lia";
 
-const progLanguage = {
-  "dart": [
-    { title: "Dart 1", content: "Swipe me!" },
-    { title: "Dart 2", content: "Nice!" },
-    { title: "Dart 3", content: "Keep going" },
-    { title: "Dart 4", content: "Almost done" },
-    { title: "Dart 5", content: "Great!" },
-  ],
- "kotlin": [
-    { title: "Kotlin 1", content: "Swipe me!" },
-    { title: "Kotlin 2", content: "Nice!" },
-    { title: "Kotlin 3", content: "Keep going" },
-    { title: "Kotlin 4", content: "Almost done" },
-    { title: "Kotlin 5", content: "Great!" },
-  ],
-  "php": [
-    { title: "PHP 1", content: "Swipe me!" },
-    { title: "PHP 2", content: "Nice!" },
-    { title: "PHP 3", content: "Keep going" },
-    { title: "PHP 4", content: "Almost done" },
-    { title: "PHP 5", content: "Great!" },
-  ],
-  "javascript": [
-    { title: "Javascript 1", content: "Swipe me!" },
-    { title: "Javascript 2", content: "Nice!" },
-    { title: "Javascript 3", content: "Keep going" },
-    { title: "Javascript 4", content: "Almost done" },
-  ],
-  "python": [
-    { title: "Python 1", content: "Swipe me!" },
-    { title: "Python 2", content: "Nice!" },
-    { title: "Python 3", content: "Keep going" },
-    { title: "Python 4", content: "Almost done" },
-    { title: "Python 5", content: "Great!" },
-  ],
-};
-
 function MainSection4() {
   // hook useTheme pada section 4
   // const {isDark} = useTheme();
   const [index, setIndex] = useState(0);
-  const [lang, setLang] = useState<keyof typeof progLanguage>("dart")
+  const [lang, setLang] = useState<keyof typeof data.progLanguage>("dart")
 
-  const curLang = progLanguage[lang]
+  const curLang = data.progLanguage[lang]
   const next = () => setIndex((index + 1) % curLang.length)
   const prev = () => setIndex((index - 1 + curLang.length) % curLang.length)
 
-  const changeLang = (language:keyof typeof progLanguage) => {
+  const changeLang = (language:keyof typeof data.progLanguage) => {
     if (lang != language) {
       setLang(language)
       setIndex(0)
